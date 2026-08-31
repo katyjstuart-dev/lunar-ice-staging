@@ -213,3 +213,70 @@ main img,.section img,.tile img,.split img{max-width:100%;height:auto}
   .brandgrid{grid-template-columns:1fr 1fr;gap:9px}
   .brandnamecard{min-height:78px;font-size:15px;padding:14px 10px}
 }
+
+/* V18 social recognition */
+.sociallinks{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.sociallinks a{
+  display:inline-flex!important;align-items:center;gap:8px;
+  min-height:42px;padding:8px 12px;border:1px solid rgba(255,255,255,.22);
+  text-decoration:none;
+}
+.socialicon{width:22px;height:22px;flex:0 0 auto;color:#B0BC70}
+@media(max-width:620px){.sociallinks a{min-height:46px}.socialicon{width:24px;height:24px}}
+
+/* V20 — prominent phone and WhatsApp */
+.topcontacts{display:flex;align-items:center;gap:9px;margin-left:auto}
+.topcontacts a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:900;white-space:nowrap}
+.topphone{color:#fff;font-size:16px;padding:10px 12px;border:1px solid rgba(255,255,255,.28)}
+.topwa{background:#B0BC70;color:#0D174D;padding:11px 14px;font-size:14px}
+@media(max-width:1100px){.topphone span{font-size:14px}}
+@media(max-width:960px){
+ .topcontacts{margin-left:auto;margin-right:8px}
+ .topphone{font-size:15px;padding:9px 10px}
+ .topwa{padding:10px 11px}
+}
+@media(max-width:650px){
+ .topcontacts{position:absolute;left:0;right:0;top:100%;display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0;z-index:15}
+ .topcontacts a{border:0;min-height:48px}
+ .topphone{background:#fff;color:#0D174D}
+ .topwa{background:#B0BC70;color:#0D174D}
+ .top{margin-bottom:48px}
+}
+
+/* V20 — contact form: explicit, roomy structure; no overlapping fields */
+.contactform{
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+ gap:22px!important;
+ max-width:860px!important;
+ width:100%!important;
+ padding:clamp(28px,4vw,52px)!important;
+ box-sizing:border-box!important;
+ overflow:visible!important;
+}
+.contactform *{box-sizing:border-box!important;min-width:0}
+.contactform label{display:block!important;width:100%!important;font-size:17px!important;font-weight:850!important;line-height:1.35!important;margin:0!important}
+.contactform input,.contactform select,.contactform textarea{
+ display:block!important;width:100%!important;max-width:100%!important;
+ margin-top:9px!important;min-height:56px!important;padding:14px 15px!important;
+ font-size:17px!important;line-height:1.35!important;
+}
+.contactform textarea{min-height:155px!important}
+.contactform label:has(textarea),.contactform .full,.contactform button,.contactform .note,.contactform p{grid-column:1/-1!important}
+.contactform button{min-height:58px!important;font-size:17px!important}
+@supports not selector(:has(*)){
+ .contactform{grid-template-columns:1fr!important}
+ .contactform>*{grid-column:1!important}
+}
+@media(max-width:760px){
+ .contactform{grid-template-columns:1fr!important;padding:24px 18px!important;gap:18px!important}
+ .contactform>*{grid-column:1!important}
+}
+
+/* V20 — footer brand uses the same restrained brand treatment as header */
+.footerbrandtype{display:inline-flex!important;width:auto!important;background:transparent!important;padding:0!important}
+.footerbrandtype .brandart{width:205px!important;height:72px!important;object-fit:contain!important;object-position:left center!important}
+.footer .brandart{filter:none!important}
+
+/* Rural imagery: visible, correctly proportioned */
+img[src="rural-wedding.jpg"]{object-position:center center!important}
