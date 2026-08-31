@@ -104,3 +104,112 @@ main img,.section img,.tile img,.split img{max-width:100%;height:auto}
   .subheroMedia img{aspect-ratio:4/3}
   .callout .wrap{align-items:flex-start;flex-direction:column}
 }
+
+/* V16 — faithful Lunar Ice logo artwork */
+.brand.brandtype{display:flex;align-items:center;text-decoration:none;overflow:visible}
+.brandart{
+  display:block;
+  width:clamp(180px,17vw,245px);
+  height:76px;
+  object-fit:contain;
+  object-position:left center;
+}
+.footerbrandtype .brandart{width:215px;height:82px}
+@media(max-width:760px){
+  .brandart{width:165px;height:62px}
+  .footerbrandtype .brandart{width:185px;height:72px}
+}
+
+/* V16 — enquiry form is a proper, readable panel */
+.formgrid{
+  background:#fff;
+  border:2px solid #d7dacd;
+  padding:clamp(26px,4vw,48px);
+  box-shadow:0 18px 48px rgba(13,23,77,.09);
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px 20px;
+  max-width:760px;
+  width:100%;
+}
+.formgrid .field{min-width:0}
+.formgrid label{
+  display:block;
+  margin-bottom:9px;
+  font-size:16px!important;
+  line-height:1.35;
+  font-weight:800;
+  color:#0D174D;
+}
+.formgrid input,.formgrid select,.formgrid textarea{
+  width:100%;
+  min-height:52px;
+  padding:13px 14px;
+  border:1.5px solid #b9bfaf;
+  background:#fff;
+  color:#0D174D;
+  font:inherit;
+  font-size:17px!important;
+  border-radius:0;
+}
+.formgrid textarea{min-height:140px;resize:vertical}
+.formgrid .full,.formgrid .field:has(textarea){grid-column:1/-1}
+.formgrid button{
+  grid-column:1/-1;
+  min-height:56px;
+  padding:15px 22px;
+  border:0;
+  background:#0D174D;
+  color:#fff;
+  font-weight:900;
+  font-size:16px;
+  cursor:pointer;
+}
+.formgrid input:focus,.formgrid select:focus,.formgrid textarea:focus{
+  outline:3px solid rgba(176,188,112,.45);
+  outline-offset:1px;
+  border-color:#0D174D;
+}
+@media(max-width:760px){
+  .formgrid{grid-template-columns:1fr;padding:24px 19px;gap:18px}
+  .formgrid .field,.formgrid .full,.formgrid .field:has(textarea),.formgrid button{grid-column:1}
+}
+
+/* V17 — brand/venue credibility section */
+.brandproof{padding:105px 0;background:#fff}
+.brandproof h2{margin:14px 0 22px;font-size:clamp(48px,5.6vw,82px);line-height:.92;letter-spacing:-.045em}
+.brandproof .lead{max-width:840px}
+.brandgrid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:38px;
+}
+.brandnamecard{
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:18px 16px;
+  border:1px solid #d9ddd2;
+  background:#f7f7f2;
+  color:#0D174D;
+  font-size:17px;
+  font-weight:900;
+  line-height:1.25;
+}
+.brandnamecard:nth-child(4n+2), .brandnamecard:nth-child(4n+3){background:#eef0e5}
+.brandnote{
+  margin-top:22px;
+  font-size:14px!important;
+  line-height:1.55;
+  color:#6a7185;
+  max-width:900px;
+}
+@media(max-width:900px){.brandgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){
+  .brandproof{padding:78px 0}
+  .brandgrid{grid-template-columns:1fr 1fr;gap:9px}
+  .brandnamecard{min-height:78px;font-size:15px;padding:14px 10px}
+}
