@@ -552,3 +552,11 @@ img[src="rural-wedding-v21.jpg"]{object-position:center 42%!important}
 .usecase-grid p{margin:0;line-height:1.65}
 @media(max-width:850px){.usecase-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.usecase-grid{grid-template-columns:1fr}}
+
+/* V27 — give Contact breathing room before the header contact controls */
+@media(min-width:901px){
+  .nav{padding-right:14px!important}
+  .nav>a:last-of-type{margin-right:12px!important}
+  .topcontacts{margin-left:10px!important}
+}
+.inline-link{font-weight:800;text-decoration:underline;text-decoration-color:#B0BC70;text-decoration-thickness:2px;text-underline-offset:3px}
