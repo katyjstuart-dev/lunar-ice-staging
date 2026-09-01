@@ -740,3 +740,47 @@ html, body { width:100%; max-width:100%; overflow-x:hidden; }
 
 /* V40: supplied venue imagery + brand proof */
 .real-work{overflow:hidden}.real-work h2{max-width:860px}.delivery-mosaic{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:36px}.delivery-mosaic figure{margin:0;overflow:hidden;min-height:260px;background:#111a4c}.delivery-mosaic figure:nth-child(6n+1),.delivery-mosaic figure:nth-child(6n+4){grid-column:span 7}.delivery-mosaic figure:nth-child(6n+2),.delivery-mosaic figure:nth-child(6n+3){grid-column:span 5}.delivery-mosaic figure:nth-child(6n+5),.delivery-mosaic figure:nth-child(6n+6){grid-column:span 6}.delivery-mosaic img{width:100%;height:100%;min-height:260px;max-height:520px;object-fit:cover;transition:transform .5s ease}.delivery-mosaic figure:hover img{transform:scale(1.025)}.brand-mark-v38.felix{font-family:Georgia,serif;letter-spacing:.16em;font-size:26px}.brand-mark-v38.directtable{font-weight:900;font-style:italic}.brand-mark-v38.bennetts{font-weight:900}.brand-mark-v38.thyme{font-family:Georgia,serif;letter-spacing:.04em}@media(max-width:760px){.delivery-mosaic{grid-template-columns:1fr 1fr;gap:8px}.delivery-mosaic figure,.delivery-mosaic figure:nth-child(n){grid-column:span 1;min-height:190px}.delivery-mosaic figure:nth-child(3n+1){grid-column:1/-1;min-height:260px}.delivery-mosaic img{min-height:190px}.brand-showcase-v38{grid-template-columns:1fr 1fr}}
+
+/* V40 reliable brand wall: no broken external image dependencies */
+.text-wall .client-wordmark{display:flex;align-items:center;justify-content:center;text-align:center;min-height:92px;padding:18px;border:1px solid var(--line);background:#fff;font-weight:900;letter-spacing:.02em;color:var(--navy);font-size:clamp(14px,1.4vw,20px)}.text-wall .client-wordmark:nth-child(4n+2){font-family:Georgia,serif;font-weight:700}.text-wall .client-wordmark:nth-child(5n){letter-spacing:.12em}.text-wall .client-wordmark:hover{background:var(--cream);transform:translateY(-2px)}
+
+
+/* V42 — single canonical Lunar Ice logo treatment across every page */
+.brand.brandtype{display:flex!important;align-items:center!important;overflow:visible!important;min-width:0!important}
+.brand.brandtype .brandart,
+.footerbrand .brandart,
+.footerbrandtype .brandart{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:210px!important;
+  max-width:210px!important;
+  height:82px!important;
+  max-height:82px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  flex:0 0 auto!important;
+  filter:none!important;
+}
+.brand-fallback-v42{
+  display:none;
+  color:#B0BC70!important;
+  font-family:'Audiowide',Arial,sans-serif!important;
+  font-size:22px!important;
+  font-weight:400!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+}
+.footerbrand .brand-fallback-v42,.footerbrandtype .brand-fallback-v42{font-size:20px!important}
+@media(max-width:900px){
+  .brand.brandtype .brandart{width:176px!important;max-width:176px!important;height:70px!important;max-height:70px!important}
+}
+@media(max-width:520px){
+  .brand.brandtype .brandart{width:150px!important;max-width:150px!important;height:62px!important;max-height:62px!important}
+}
+
+
+/* V43 — all brand artwork stored locally; no hotlinked logo images */
+.brand-showcase-v38 .local-logo-v43{padding:10px;min-height:128px;overflow:hidden;background:#fff}
+.brand-showcase-v38 .local-logo-v43 img{display:block;width:100%;height:116px;object-fit:contain;object-position:center;max-width:100%;filter:none}
+@media(max-width:720px){.brand-showcase-v38 .local-logo-v43{min-height:108px;padding:8px}.brand-showcase-v38 .local-logo-v43 img{height:94px}}

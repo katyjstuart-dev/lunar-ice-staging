@@ -1,17 +1,18 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: contact.html'); exit; }
-$fields = ['name','telephone','email','repeat_email','delivery_date','delivery_time','postcode','what3words','ice_type','purpose','quantity','heard','message'];
-$data=[]; foreach($fields as $f){ $data[$f]=trim($_POST[$f] ?? ''); }
-if (!$data['name'] || !$data['telephone'] || !$data['email'] || !$data['repeat_email'] || !$data['delivery_date'] || !$data['delivery_time'] || !$data['postcode'] || !$data['quantity'] || !$data['heard'] || !$data['message']) { die('Please complete all required fields.'); }
-if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL) || strcasecmp($data['email'],$data['repeat_email']) !== 0) { die('Please check the email addresses match.'); }
-$clean=function($s){ return str_replace(["\r","\n"], ' ', $s); };
-$body="Website Enquiry\n\n";
-$labels=['name'=>'Name','telephone'=>'Telephone','email'=>'Email','delivery_date'=>'Date of Delivery','delivery_time'=>'Time of Delivery','postcode'=>'Postcode','what3words'=>'What3Words / exact access','ice_type'=>'Type of Ice','purpose'=>'Purpose','quantity'=>'How many bags','heard'=>'Where did you hear about us','message'=>'Message / additional delivery info'];
-foreach($labels as $k=>$label){ $body .= $label.": ".$data[$k]."\n"; }
-$headers="From: Lunar Ice Website <info@lunarice.co.uk>\r\n";
-$headers.="Reply-To: ".$clean($data['email'])."\r\n";
-$headers.="Content-Type: text/plain; charset=UTF-8\r\n";
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); exit('Method not allowed'); }
+function clean($v){ return trim(str_replace(["\r","\n"], ' ', (string)$v)); }
+$name=clean($_POST['name']??''); $telephone=clean($_POST['telephone']??'');
+$email=filter_var($_POST['email']??'', FILTER_VALIDATE_EMAIL); $repeat=filter_var($_POST['repeat_email']??'', FILTER_VALIDATE_EMAIL);
+if(!$name || !$telephone || !$email || !$repeat || strtolower($email)!==strtolower($repeat)){ http_response_code(400); exit('Please check the required fields and make sure both email addresses match.'); }
+$fields=[
+'Name'=>$name,'Telephone'=>$telephone,'Email'=>$email,
+'Delivery date'=>clean($_POST['delivery_date']??''),'Preferred 2-hour slot'=>clean($_POST['delivery_time']??''),
+'Delivery postcode'=>clean($_POST['postcode']??''),'What3Words / access'=>clean($_POST['what3words']??''),
+'Ice type'=>clean($_POST['ice_type']??''),'Purpose'=>clean($_POST['purpose']??''),'Quantity'=>clean($_POST['quantity']??''),
+'How they heard about us'=>clean($_POST['heard']??''),'Message'=>trim((string)($_POST['message']??''))];
+$body="New Lunar Ice website enquiry\n\n"; foreach($fields as $k=>$v){$body.=$k.": ".$v."\n";}
+$headers="From: Lunar Ice Website <info@lunarice.co.uk>\r\nReply-To: ".$email."\r\nContent-Type: text/plain; charset=UTF-8";
 $ok=mail('info@lunarice.co.uk','Website Enquiry',$body,$headers);
-if($ok){ echo '<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:Arial;background:#0D174D;color:white;padding:8vw}a{color:#B0BC70}</style><h1>Thank you.</h1><p>Your enquiry has been sent to Lunar Ice.</p><p><a href="index.html">Back to the website</a></p>'; }
-else { echo 'There was a problem sending the enquiry. Please call or WhatsApp 07907 783121.'; }
+if($ok){ header('Location: contact.html?sent=1'); exit; }
+http_response_code(500); echo 'Your enquiry could not be sent. Please call or WhatsApp Lunar Ice on 07907 783121.';
 ?>
