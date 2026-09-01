@@ -42,8 +42,17 @@
     <div class="field"><label for="what3words">What3Words / exact access point</label><input id="what3words" name="what3words" placeholder="Especially useful for fields and rural venues"></div>
   </div>
   <div class="form-row">
-    <div class="field"><label for="ice_type">Type of Ice</label><select id="ice_type" name="ice_type"><option>Not sure — please advise</option><option>Cubed Ice 12kg</option><option>Crushed Ice 12kg</option><option>6 × 2kg Cubed Packs</option><option>Mixed</option></select></div>
-    <div class="field"><label for="purpose">Purpose</label><select id="purpose" name="purpose"><option>Ice for Drinking</option><option>Ice for Chilling</option><option>Ice for Drinking & Chilling</option><option>Ice Baths / Cold Water Therapy</option><option>Other</option></select></div>
+    <div class="field"><label for="ice_type">Type of Ice</label><select id="ice_type" name="ice_type"><option value="" selected disabled>▼ Please choose one</option><option>Not sure — please advise</option><option>Cubed Ice 12kg</option><option>Crushed Ice 12kg</option><option>6 × 2kg Cubed Packs</option><option>Mixed</option></select></div>
+    <div class="field"><label>Purpose of ice*
+<select name="purpose" id="purpose" required>
+<option value="" selected disabled>▼ Please choose one</option>
+<option value="Ice for Chilling">Ice for chilling</option>
+<option value="Ice for Drinking">Ice for drinking</option>
+<option value="Ice for Chilling and Drinking">Ice for chilling and drinking</option>
+<option value="Other">Other</option>
+</select>
+<small class="field-help">Choose one from the drop-down. If you select <strong>Other</strong>, please put the details in the message box below.</small>
+</label><select id="purpose" name="purpose"><option>Ice for Drinking</option><option>Ice for Chilling</option><option>Ice for Drinking & Chilling</option><option>Ice Baths / Cold Water Therapy</option><option>Other</option></select></div>
   </div>
   <div class="form-row">
     <div class="field"><label for="quantity">How many bags? *</label><input id="quantity" name="quantity" required placeholder="Have a go — we can help from there"></div>
