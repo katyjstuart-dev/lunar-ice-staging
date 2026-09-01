@@ -544,3 +544,11 @@ img[src="rural-wedding-v21.jpg"]{object-position:center 42%!important}
  .contactform .form-row{grid-template-columns:1fr!important;gap:16px!important;margin-bottom:16px!important}
  .contactform label{min-height:auto!important}
 }
+
+/* V26 natural long-tail use cases */
+.usecase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:30px}
+.usecase-grid>div{border-top:3px solid #B0BC70;padding-top:18px}
+.usecase-grid h3{font-size:18px;margin:0 0 8px;color:#0D174D}
+.usecase-grid p{margin:0;line-height:1.65}
+@media(max-width:850px){.usecase-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.usecase-grid{grid-template-columns:1fr}}
