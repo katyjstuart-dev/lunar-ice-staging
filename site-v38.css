@@ -823,3 +823,48 @@ html, body { width:100%; max-width:100%; overflow-x:hidden; }
 
 .back-to-top-v46{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border:0;border-radius:50%;background:#B0BC70;color:#0D174D;font-size:23px;font-weight:900;display:grid;place-items:center;cursor:pointer;z-index:80;box-shadow:0 10px 28px rgba(13,23,77,.28);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s ease}.back-to-top-v46.show{opacity:1;visibility:visible;transform:none}.back-to-top-v46:hover{transform:translateY(-2px)}
 @media(max-width:620px){.back-to-top-v46{right:14px;bottom:72px;width:44px;height:44px}}
+
+
+/* V47 — clean header architecture + owner/founder/team positioning */
+.top{position:sticky!important;top:0!important;z-index:100!important;background:#0D174D!important}
+.topin{width:min(1240px,94vw)!important;margin:auto!important;min-height:84px!important;height:auto!important;display:grid!important;grid-template-columns:132px minmax(0,1fr) auto!important;align-items:center!important;column-gap:22px!important;position:relative!important}
+.brand.brandtype{grid-column:1!important;display:flex!important;align-items:center!important;width:132px!important;max-width:132px!important;flex:none!important;margin:0!important;overflow:visible!important;z-index:2!important}
+.brand.brandtype .brandart{width:132px!important;max-width:132px!important;height:58px!important;max-height:58px!important;object-fit:contain!important;object-position:left center!important}
+.nav{grid-column:2!important;margin:0!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:15px!important;min-width:0!important;white-space:nowrap!important;position:static!important}
+.nav a,.navdrop{font-size:11px!important;line-height:1!important;white-space:nowrap!important;padding:0!important}
+.topcontacts{grid-column:3!important;display:flex!important;align-items:center!important;gap:8px!important;margin:0!important;flex:none!important}
+.topphone,.topwa{font-size:11px!important;min-height:42px!important;padding:9px 10px!important;white-space:nowrap!important}
+.menuBtn{display:none!important}
+
+/* Use a deliberate compact menu on tablet/iPad and smaller — no crammed desktop nav */
+@media(max-width:1360px){
+  .topin{grid-template-columns:132px 1fr auto!important;min-height:84px!important}
+  .topcontacts{display:none!important}
+  .menuBtn{display:inline-flex!important;grid-column:3!important;align-items:center!important;justify-content:center!important;margin:0!important;background:transparent!important;border:1px solid rgba(255,255,255,.35)!important;color:#fff!important;padding:11px 14px!important;font-weight:900!important;letter-spacing:.04em!important;z-index:4!important}
+  .nav{display:none!important}
+  .nav.open{display:flex!important;position:absolute!important;left:0!important;right:0!important;top:100%!important;background:#0D174D!important;padding:16px 5vw 24px!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:0!important;border-top:1px solid rgba(255,255,255,.14)!important;box-shadow:0 18px 38px rgba(0,0,0,.25)!important;z-index:3!important;white-space:normal!important}
+  .nav.open>a,.nav.open .navdrop{display:block!important;width:100%!important;padding:13px 0!important;text-align:left!important;font-size:13px!important;line-height:1.2!important}
+  .navgroup{width:100%!important}
+  .dropdown{position:static!important;display:none!important;box-shadow:none!important;margin:0!important;padding:0 0 8px 16px!important;background:rgba(255,255,255,.04)!important}
+  .navgroup.open .dropdown{display:block!important}
+  .navgroup.open .dropdown a{display:block!important;padding:10px 0!important;font-size:12px!important}
+}
+@media(max-width:600px){
+  .topin{width:min(94vw,1240px)!important;grid-template-columns:112px 1fr auto!important;min-height:78px!important}
+  .brand.brandtype{width:112px!important;max-width:112px!important}
+  .brand.brandtype .brandart{width:112px!important;max-width:112px!important;height:50px!important;max-height:50px!important}
+  .menuBtn{padding:10px 12px!important;font-size:11px!important}
+}
+
+.about-capability-hero-v47{background:#f7f6f0;padding:78px 0 82px;border-bottom:1px solid rgba(13,23,77,.10)}
+.about-capability-grid-v47{display:grid;grid-template-columns:minmax(0,1fr) minmax(420px,.95fr);gap:64px;align-items:center}
+.about-capability-copy-v47 h1{font-size:clamp(58px,6.7vw,96px);line-height:.88;letter-spacing:-.055em;margin:16px 0 28px;color:#0D174D}.about-capability-copy-v47 h1 em{font-style:normal;color:#B0BC70}
+.about-capability-copy-v47 p{font-size:18px;line-height:1.68;color:#4b5571;max-width:760px}.about-capability-lead-v47{font-size:22px!important;color:#0D174D!important}
+.about-capability-image-v47{position:relative;min-height:500px;background:#0D174D;overflow:hidden}.about-capability-image-v47 img{width:100%;height:100%;min-height:500px;object-fit:cover;object-position:center}
+.about-capability-tag-v47{position:absolute;left:0;right:0;bottom:0;background:rgba(13,23,77,.92);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center}.about-capability-tag-v47 b{color:#B0BC70;font-size:12px;letter-spacing:.09em}.about-capability-tag-v47 span{font-size:12px}
+.about-proof-v47{background:#07143f;color:#fff}.about-proof-grid-v47{display:grid;grid-template-columns:repeat(4,1fr)}.about-proof-grid-v47>div{padding:26px 24px;border-right:1px solid rgba(255,255,255,.18)}.about-proof-grid-v47>div:last-child{border-right:0}.about-proof-grid-v47 b{display:block;color:#B0BC70;font-size:13px;line-height:1.25;margin-bottom:8px;letter-spacing:.04em}.about-proof-grid-v47 span{font-size:12px;line-height:1.5;color:#e8ebf4}
+.about-founder-v47{background:#fff}.about-founder-grid-v47{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr);gap:70px;align-items:start}.about-founder-copy-v47 h2{font-size:clamp(50px,5.8vw,82px);line-height:.9;letter-spacing:-.05em;margin:14px 0 26px}.about-founder-copy-v47 h2 em{font-style:normal;color:#B0BC70}.about-founder-copy-v47 p{font-size:17px;line-height:1.7;color:#4b5571;max-width:850px}.about-founder-lead-v47{font-size:20px!important;color:#0D174D!important}
+.about-founder-side-v47{display:grid;gap:18px}.about-founder-photo-v47{width:100%;max-width:330px;justify-self:end;background:#f1f1eb;overflow:hidden}.about-founder-photo-v47 img{width:100%;height:auto;max-height:390px;object-fit:contain;object-position:center top}.about-team-card-v47{background:#0D174D;color:#fff;padding:30px;max-width:430px;justify-self:end}.about-team-card-v47 span{display:block;color:#B0BC70;font-size:11px;font-weight:900;letter-spacing:.14em;margin-bottom:14px}.about-team-card-v47 b{display:block;font-size:28px;line-height:1.05;margin-bottom:15px}.about-team-card-v47 p{margin:0;color:#e5e8f0;font-size:14px;line-height:1.6}
+.about-values-v47{background:#0D174D;color:#fff;padding:78px 0}.about-value-grid-v47{display:grid;grid-template-columns:repeat(4,1fr);margin-top:28px;border-top:1px solid rgba(255,255,255,.18);border-bottom:1px solid rgba(255,255,255,.18)}.about-value-grid-v47>div{padding:28px 24px;border-right:1px solid rgba(255,255,255,.18)}.about-value-grid-v47>div:last-child{border-right:0}.about-value-grid-v47 b{display:block;color:#B0BC70;font-size:17px;margin-bottom:9px}.about-value-grid-v47 p{margin:0;font-size:14px;line-height:1.6;color:#e5e8f0}
+@media(max-width:900px){.about-capability-grid-v47,.about-founder-grid-v47{grid-template-columns:1fr}.about-capability-image-v47,.about-capability-image-v47 img{min-height:420px}.about-proof-grid-v47,.about-value-grid-v47{grid-template-columns:1fr 1fr}.about-founder-photo-v47,.about-team-card-v47{justify-self:start}.about-founder-photo-v47{max-width:260px}.about-proof-grid-v47>div:nth-child(2),.about-value-grid-v47>div:nth-child(2){border-right:0}.about-proof-grid-v47>div:nth-child(-n+2),.about-value-grid-v47>div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.18)}}
+@media(max-width:620px){.about-capability-hero-v47{padding:55px 0}.about-capability-image-v47,.about-capability-image-v47 img{min-height:330px}.about-proof-grid-v47,.about-value-grid-v47{grid-template-columns:1fr}.about-proof-grid-v47>div,.about-value-grid-v47>div{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.18)}.about-proof-grid-v47>div:last-child,.about-value-grid-v47>div:last-child{border-bottom:0}.about-founder-photo-v47{max-width:200px}.about-capability-tag-v47{display:block}.about-capability-tag-v47 span{display:block;margin-top:4px}}
