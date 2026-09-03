@@ -34,3 +34,27 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
   update();
   btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 })();
+
+// V52 homepage hero rotating punch-line
+(() => {
+  const holder = document.querySelector('.hero-punch-v52');
+  if (!holder) return;
+  const line = holder.querySelector('span');
+  if (!line) return;
+  const messages = [
+    'BIG EVENT? NO DRAMA.',
+    'WEDDING? SORTED.',
+    'BAR RUNNING LOW? WE’RE ON IT.',
+    '12KG CUBED & CRUSHED.'
+  ];
+  let i = 0;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  window.setInterval(() => {
+    line.classList.add('changing');
+    window.setTimeout(() => {
+      i = (i + 1) % messages.length;
+      line.textContent = messages[i];
+      line.classList.remove('changing');
+    }, 280);
+  }, 3600);
+})();
