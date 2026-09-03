@@ -58,3 +58,14 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
     }, 280);
   }, 3600);
 })();
+
+// V65 — prominent floating WhatsApp shortcut on every page
+(() => {
+  if (document.querySelector('.floating-wa-v65')) return;
+  const a=document.createElement('a');
+  a.className='floating-wa-v65';
+  a.href='https://wa.me/447907783121';
+  a.setAttribute('aria-label','WhatsApp Lunar Ice');
+  a.innerHTML='<span class="floating-wa-icon-v65">◉</span><span>WhatsApp</span>';
+  document.body.appendChild(a);
+})();
