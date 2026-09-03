@@ -59,13 +59,14 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
   }, 3600);
 })();
 
-// V65 — prominent floating WhatsApp shortcut on every page
+// V66 — floating WhatsApp logo shortcut on every page
 (() => {
   if (document.querySelector('.floating-wa-v65')) return;
   const a=document.createElement('a');
   a.className='floating-wa-v65';
   a.href='https://wa.me/447907783121';
   a.setAttribute('aria-label','WhatsApp Lunar Ice');
-  a.innerHTML='<span class="floating-wa-icon-v65">◉</span><span>WhatsApp</span>';
+  a.setAttribute('title','WhatsApp Lunar Ice');
+  a.innerHTML='<svg class="floating-wa-svg-v66" aria-hidden="true" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a12.8 12.8 0 0 0-11 19.4L3.4 29l6.8-1.8A12.9 12.9 0 1 0 16 3zm0 23.4c-2 0-4-.6-5.7-1.6l-.4-.2-4 1 1.1-3.9-.3-.4A10.5 10.5 0 1 1 16 26.4zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3.1-1.7-4.4-3.8-.3-.5.3-.5.9-1.6.1-.2 0-.5 0-.7l-1-2.4c-.3-.6-.6-.5-.8-.5h-.7c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.1 6.5 5.8 2.4 1 3.4 1.1 4.6.9.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.5z"/></svg>';
   document.body.appendChild(a);
 })();
