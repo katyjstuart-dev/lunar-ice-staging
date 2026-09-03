@@ -27,7 +27,7 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
   btn.className='back-to-top-v46';
   btn.type='button';
   btn.setAttribute('aria-label','Back to top');
-  btn.innerHTML='↑';
+  btn.innerHTML='<span class="backtop-arrow-v64">↑</span><span class="backtop-label-v64">Top of page</span>';
   document.body.appendChild(btn);
   const update=()=>btn.classList.toggle('show', window.scrollY>500);
   window.addEventListener('scroll',update,{passive:true});
