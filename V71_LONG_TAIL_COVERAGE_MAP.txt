@@ -1,0 +1,32 @@
+LUNAR ICE V71 — LONG-TAIL SEO COVERAGE MAP
+
+ADDITIVE-ONLY BUILD. No V70 content removed or rewritten.
+
+Search Console-led terms added naturally across relevant pages:
+- ice delivery near me / local ice delivery / ice supplier near me / ice cube delivery near me
+- bulk ice delivery / bulk ice near me / buy ice in bulk / wholesale ice / commercial ice delivery / pallet ice delivery
+- party ice delivery / ice delivery for party / ice delivery for wedding / home ice delivery
+- 12kg bag of ice / 12kg bags of cubed ice / 12kg bags of crushed ice
+- crushed ice delivery / crushed ice near me
+- same day ice delivery
+- ice delivery Crawley / Gatwick / Horsham / Brighton
+- ice delivery Surrey / Kent / Bromley / London / Hampshire / Southampton
+- restaurant ice delivery / pub ice delivery / bar ice delivery / club ice delivery
+- coffee shop ice delivery / hotel ice delivery / catering ice delivery / mobile bar ice delivery
+- hospitality ice delivery / repeat business ice delivery
+- food-processing ice / temporary product cooling
+
+Placement:
+commercial-bulk-deliveries.html — hospitality/trade/business/wholesale/pallet terms
+weddings-events.html — wedding/party/home delivery terms
+delivery-areas.html — near-me/local + key geographic terms
+sussex.html — Crawley/Gatwick/Horsham/Brighton
+surrey.html — Surrey/local/bulk
+kent.html — Kent/supplier/bulk/party
+further-afield.html — London/Bromley/Hampshire/Southampton
+cubed-ice.html — 12kg/buy/order/bulk cubed ice
+crushed-ice.html — crushed delivery/buy/near-me
+ice-delivery-explained.html — near-me/same-day/bulk/home
+faqs-blog.html — same-day/home/12kg/hospitality/wholesale/location FAQs
+
+Important: Search phrases are written as customer-facing copy, not hidden keyword stuffing. Existing What3Words references remain untouched; no What3Words field has been added to the enquiry form.
