@@ -1,0 +1,30 @@
+LUNAR ICE V76 — BACKEND SEO HARDENING
+Date: 2026-09-04
+
+Built additively on V75. No visible copy, imagery, navigation or layout intentionally changed.
+
+ADDED:
+- LocalBusiness JSON-LD on homepage, with core service areas Sussex, Surrey and Kent.
+- BreadcrumbList JSON-LD on interior pages.
+- Product JSON-LD on 12kg Cubed, 12kg Crushed and 6 x 2kg Cubed Pack pages.
+- FAQPage JSON-LD generated only from FAQ content already visible on the FAQ page.
+
+PRESERVED FROM EARLIER VERSIONS:
+- Canonical URLs.
+- robots.txt.
+- XML sitemap.
+- Migration/redirect .htaccess.
+- Existing Organization/WebSite schema.
+- Social metadata.
+- Locked visible site content and V75 brand/logo work.
+
+INTENTIONALLY NOT ADDED:
+- Fake/self-serving Google review AggregateRating stars. Google's current review guidelines make self-controlled LocalBusiness/Organization review markup ineligible for star review features.
+- Invented address, opening hours, prices, stock, ratings or service claims.
+
+FINAL PRE-LAUNCH ITEMS STILL REQUIRE LIVE/EXTERNAL VALIDATION:
+- Rich Results Test / URL Inspection after deployment.
+- Submit final sitemap in Google Search Console.
+- Verify redirect behaviour on IONOS.
+- Check Core Web Vitals/page speed on the deployed site.
+- Confirm Google Business Profile details and website link.
