@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://www.lunarice.co.uk/sitemap.xml

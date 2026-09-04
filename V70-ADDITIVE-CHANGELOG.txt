@@ -1,0 +1,19 @@
+LUNAR ICE V70 - ADDITIVE ONLY
+
+V69 content/design locked. No existing visible copy, image, navigation item, form field, CSS rule or JavaScript behaviour was removed or rewritten.
+
+Added only:
+- Canonical URL tags to all HTML pages (our-products.html canonicalises to products.html).
+- Robots directives; 404 is noindex/follow.
+- Open Graph and Twitter social-share metadata.
+- Organization + WebSite JSON-LD on the homepage.
+- sitemap.xml.
+- robots.txt.
+- .htaccess canonical-host and legacy-URL 301 protection, based on Search Console legacy URLs.
+
+Important locked rule:
+- What3Words mentions in normal website copy remain.
+- No What3Words field is present in the visible contact form.
+
+Pre-launch note:
+- Test .htaccess redirects on IONOS staging/temporary deployment before replacing the live site.
