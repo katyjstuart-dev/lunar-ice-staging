@@ -1,0 +1,30 @@
+LUNAR ICE V77 — STICKY HEADER + SEARCH CONSOLE MIGRATION NOTES
+Date: 4 September 2026
+Baseline: V76 BACKEND SEO HARDENING
+
+VISIBLE CHANGE
+- Main Lunar Ice header/navigation is now fixed to the top of the viewport on every page while scrolling.
+- Desktop/tablet keeps the full header available.
+- Mobile keeps the logo + burger header available.
+- Existing mobile bottom contact bar and back-to-top behaviour are retained.
+- Added page-top spacing so content is not hidden beneath the fixed header.
+
+SEARCH CONSOLE EVIDENCE CAPTURED FOR PRE-LAUNCH MIGRATION
+- Current sitemap: /sitemap.xml — Search Console status Success; 23 discovered pages; last read 27 Aug 2026.
+- HTTPS report shown clean: 0 non-HTTPS URLs and no critical HTTPS issues.
+- Coverage export supplied separately records the current valid/indexed URL set.
+- Non-indexed examples reviewed:
+  * /blog/index.php?tag=East — crawled, currently not indexed.
+  * /blog/?tag=delivered' — crawled, currently not indexed.
+  * Old “Chill your drinks in style – unique ice stations for your wedding…” blog URL — duplicate without user-selected canonical.
+- These old blog/tag URLs are migration housekeeping; they are not to be forced into the index.
+
+LAUNCH RULES — DO NOT APPLY TO LIVE SITE YET
+- Preserve existing important URLs wherever practical.
+- Where an old/indexed URL genuinely moves, use a specific permanent 301 to the closest relevant replacement; do not blanket-redirect everything to the homepage.
+- Keep HTTPS and one preferred canonical URL per page.
+- Final sitemap must contain only intended indexable canonical pages.
+- Resolve legacy FAQ/blog URL mismatch and old blog URLs during final redirect-map pass.
+- Test redirects, sitemap, canonicals, robots.txt, metadata, structured data, internal links and branded 404 before replacing the live IONOS site.
+
+V76 SEO hardening and all earlier design/content changes remain intact.
