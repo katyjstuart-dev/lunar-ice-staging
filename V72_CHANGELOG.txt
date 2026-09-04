@@ -1,0 +1,11 @@
+LUNAR ICE V72 — CORE COUNTY SEO + HOMEPAGE PRODUCT CORRECTION
+
+Approved changes from V71:
+1. Homepage product label changed from SHIVER ICE to 6 X 2KG CUBED PACK.
+2. Homepage image alt text updated to match the product wording.
+3. Added explicit homepage internal links: ICE DELIVERY SURREY, ICE DELIVERY SUSSEX, ICE DELIVERY KENT.
+4. Removed V71-added Brighton targeting. Pre-existing Brighton references from the locked earlier build were not removed.
+5. Removed V71-added Bromley targeting.
+6. Replaced the V71 Bromley/London/Hampshire FAQ with a general further-afield FAQ centred on Sussex, Surrey and Kent as the core areas.
+
+No other intentional changes.
