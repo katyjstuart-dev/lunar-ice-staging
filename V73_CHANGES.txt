@@ -1,0 +1,8 @@
+LUNAR ICE V73
+
+User-requested changes from V72:
+1. Corrected “Lunar Cinema” to “The Luna Cinema” throughout the site.
+2. Added “Brands & Venues” to the main navigation on every standard page so the page is no longer footer-only.
+3. THE PIG at Combe hero/sign replacement remains pending selection of a different genuine sign image; the existing image has not been replaced with an invented or unrelated image.
+
+All other V72 content retained.
