@@ -1,0 +1,28 @@
+V83 — READY FOR FINAL REVIEW — 07 Sep 2026
+
+CUSTOMER-FACING REFINEMENT
+- Added a concise “No freezer? Don’t panic.” storage section to Ice Delivery Explained.
+- Explains freezer/chiller/chiller trailer/fridge options and encourages customers to check existing venue/caterer/bar storage.
+- Retains Grizzly Bear Events cold-storage link.
+- Deliberately avoids publishing Lunar Ice operational techniques, stacking methods, insulation tricks or detailed melt-management know-how.
+- Wedding storage copy aligned to the same customer-helpful / operationally-protective balance.
+
+SEO / BACKEND FINAL PASS
+- Preserved canonical URLs across all 21 HTML pages.
+- Preserved V77 Search Console migration redirects for known legacy URLs and blog routes.
+- robots.txt remains open to crawling and points to the canonical sitemap.
+- Sitemap retained and updated for pages changed in V83.
+- Fixed Terms page title/description and breadcrumb schema inherited incorrectly from Delivery Explained.
+- Verified all local href/src references: no broken local links/assets found.
+- products.html remains canonical; our-products.html remains a non-sitemap compatibility copy canonicalised to products.html.
+- 404 page retained.
+- Cache-busting stylesheet refs bumped to v83.
+
+SEARCH CONSOLE POSITION CARRIED FORWARD
+- Existing sitemap was healthy in the 04 Sep review.
+- HTTPS report was healthy.
+- 25 URLs were valid/indexed in the supplied Search Console export; legacy/indexed paths are protected by redirects where appropriate.
+- Do not request removals for harmless historical URLs simply because they are old.
+
+STATUS
+This is the review candidate, not a production deployment. Katy should check desktop/iPad/mobile and copy/imagery once more before IONOS upload. After approval, deploy this exact build, then submit/refresh sitemap in Search Console and monitor indexing/redirects.
