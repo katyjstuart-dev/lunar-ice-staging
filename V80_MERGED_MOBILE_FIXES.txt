@@ -1,0 +1,9 @@
+LUNAR ICE V80 — MERGED MOBILE FIXES
+
+Built from Lunar_Ice_V79_MOBILE_HERO_GAP_FIX.zip.
+Includes BOTH:
+1. Mobile homepage hero/landing/gap correction from the saved V79 hero-gap build.
+2. Mobile homepage service-photo label contrast fix for WEDDINGS & EVENTS and BULK & COMMERCIAL.
+
+No visible copy, images, SEO schema, redirects, sitemap, robots rules, or navigation labels were removed.
+CSS/JS cache query strings bumped to v80.

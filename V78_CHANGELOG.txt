@@ -1,0 +1,12 @@
+LUNAR ICE V78 — MOBILE HEADER / LANDING FIX
+
+Built from V77.
+
+Fixes:
+- Changed the persistent header from fixed to sticky so it remains visible while scrolling but stays in normal page flow and no longer overlays/cuts off homepage content.
+- Removed the artificial V77 body top padding that was compensating for the fixed header.
+- Added a homepage-only scroll reset (when there is no URL hash) to stop iOS/Safari/WhatsApp restoring the homepage part-way down the hero on reopen.
+- Reduced the mobile top padding on the homepage WHAT WE DO section from the general mobile spacing to 18px, tightening the white gap immediately after the 2x2 service-promise panel.
+- Bumped CSS/JS cache query strings to v78 so mobile browsers do not keep serving the V77 header behaviour from cache.
+
+No visible homepage wording, SEO copy, schema, redirects, sitemap, robots rules, imagery, navigation labels or other design content was removed.

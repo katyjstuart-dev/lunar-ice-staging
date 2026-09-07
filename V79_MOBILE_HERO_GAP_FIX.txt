@@ -1,0 +1,9 @@
+LUNAR ICE V79 — MOBILE HERO GAP FIX
+
+Built from V78.
+
+Exact change requested:
+- On mobile only, the homepage hero no longer reserves a large fixed/minimum height after the rotating punch line (e.g. “BAR RUNNING LOW? WE’RE ON IT.”).
+- The hero now sizes naturally to its content and finishes shortly after that rotating line, so the 2x2 service-promise boxes (“TWO-HOURLY DELIVERY SLOT WINDOW”, etc.) follow without the large navy/image gap.
+- Desktop/tablet layout and all visible copy, SEO, schema, redirects and migration work are untouched.
+- CSS cache query bumped to v79.
