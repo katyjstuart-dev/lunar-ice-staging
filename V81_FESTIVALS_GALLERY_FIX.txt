@@ -1,0 +1,7 @@
+V81 FESTIVALS & LARGE EVENTS GALLERY FIX
+Built from V80.
+- Replaced the three-image Magic of Thailand-heavy gallery with four varied event images.
+- Kept one Magic of Thailand/Singha image and added three different large-event images already supplied in the site.
+- Updated the gallery intro to accurately describe the broader image mix.
+- Four images fill the mobile 2x2 grid, eliminating the previous empty fourth space.
+- No other page content, SEO/schema, redirects, sitemap, robots rules, navigation or V80 mobile fixes changed.

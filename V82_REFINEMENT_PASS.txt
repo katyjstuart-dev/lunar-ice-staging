@@ -1,0 +1,16 @@
+V82 REFINEMENT PASS — built from V81
+- Katy/About context rewritten so “Is that Katy?” is explained while retaining team emphasis.
+- Refrigerated vehicle/van terminology changed to temperature-controlled vehicle wording site-wide (chiller/refrigerated trailer wording retained where technically appropriate).
+- THE PIG sign mobile hero centred and contained to prevent crop.
+- Ice Delivery Explained four-step cards redesigned with consistent Lunar Ice hierarchy.
+- Commercial service cards redesigned; open-ended requirements message added; “something repeat” fixed.
+- Sussex/Surrey/Kent keyword-dump sections replaced with customer-first local service copy, naturally covering same-day/urgent delivery, pre-booking and included delivery pricing.
+- Weddings copy broadened beyond fields/teepees to manor houses, castles, hotels, village halls, marquees, private gardens and established venues.
+- Real supplied delivery examples distributed naturally across wedding, county, festival and commercial content.
+- Natural internal links added to cubed/crushed product pages from relevant service copy.
+- Delivery Explained now includes pre-booking advice, two-hour window planning, possible early arrival and “better a few bags left than running out” guidance.
+- New Terms & Delivery Information page added with booking, delivery-window, early arrival, force-majeure-style delay, quantity/storage, access, pricing and copyright wording.
+- Copyright notice + Terms link added to all page footers.
+- No right-click blocking added: it does not meaningfully prevent copying and harms usability.
+- V81 festival four-image gallery retained.
+- Cache refs bumped to v82.

@@ -1796,3 +1796,24 @@ body{padding-top:0!important}
     opacity:1!important;
   }
 }
+
+/* V82 — refinement pass: typography, cards, steps, legal and mobile image crop */
+.v82-steps .tile,.v82-cardgrid .tile{border:1px solid rgba(13,23,77,.10);box-shadow:0 8px 24px rgba(13,23,77,.07);position:relative;overflow:hidden}
+.v82-steps .tile{background:#0D174D;color:#fff;padding-top:54px!important}
+.v82-steps .tile>span,.v82-cardno{position:absolute;top:15px;right:17px;font-family:'Audiowide',sans-serif;font-size:12px;letter-spacing:.08em;color:#B0BC70}
+.v82-steps .tile h3{font-family:'Audiowide',sans-serif;font-size:17px!important;line-height:1.2;letter-spacing:.01em;color:#B0BC70}
+.v82-steps .tile p{color:#fff!important;opacity:.92;font-size:14px!important;line-height:1.5!important}
+.v82-cardgrid .tile{background:#fff;padding-top:48px!important}
+.v82-cardgrid .tile h3{font-family:'Audiowide',sans-serif;line-height:1.2;color:#0D174D}
+.v82-any{margin-top:15px!important;padding-top:14px;border-top:1px solid rgba(13,23,77,.15)}
+.v82-proof{max-width:900px;margin:24px auto 0;line-height:1.6}
+.v82-terms{max-width:900px}.v82-terms h2{font-size:clamp(24px,3vw,34px)!important;margin-top:34px}.v82-terms p{font-size:16px;line-height:1.65}
+.v82-legal{display:flex;justify-content:space-between;gap:18px;align-items:center;padding-top:18px;padding-bottom:18px;font-size:12px;opacity:.82}.v82-legal a{color:inherit;text-decoration:underline}
+@media(max-width:760px){
+ .pig-sign-hero img{object-fit:contain!important;object-position:center center!important;background:#fff!important;padding:12px!important;aspect-ratio:4/3!important}
+ .v82-legal{flex-direction:column;align-items:flex-start;gap:7px}
+ .v82-steps .tile,.v82-cardgrid .tile{padding:48px 17px 18px!important}
+ .v82-steps .tile h3,.v82-cardgrid .tile h3{font-size:16px!important}
+ .v82-steps .tile p,.v82-cardgrid .tile p{font-size:14px!important;line-height:1.48!important}
+ .v82-service-copy .lead,.v82-service-copy p,.v82-booking p{font-size:15px!important;line-height:1.58!important}
+}
