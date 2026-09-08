@@ -2119,3 +2119,28 @@ body{padding-top:96px}
     line-height:1.42!important;
   }
 }
+
+/* V105 — header depth correction from 8 Sep iPad screenshot */
+@media (min-width:1181px){
+  .top .topin{
+    min-height:156px!important;
+    height:156px!important;
+    padding-left:clamp(46px,4.5vw,72px)!important;
+    padding-right:clamp(46px,4.5vw,72px)!important;
+  }
+
+  .top .brand.brandtype{
+    flex-basis:220px!important;
+    width:220px!important;
+    max-width:220px!important;
+    height:144px!important;
+    max-height:144px!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:220px!important;
+    max-width:220px!important;
+    height:144px!important;
+    max-height:144px!important;
+  }
+}

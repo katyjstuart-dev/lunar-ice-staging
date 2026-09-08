@@ -1,0 +1,1 @@
+V105: iPad/desktop header increased from 126px to 156px; logo area increased to 220x144px; side gutters increased. V104 proof-box correction retained.
