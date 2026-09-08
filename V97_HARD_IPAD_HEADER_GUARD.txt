@@ -1,0 +1,5 @@
+V97 HARD IPAD HEADER GUARD
+
+The tablet header fix is now embedded inline on every HTML page after the external stylesheet, plus a touch/viewport JavaScript guard. This intentionally does not rely solely on the shared stylesheet cascade. On viewports below 1500px, or touch-primary devices, the horizontal desktop navigation is hidden and the MENU button is shown.
+
+Reason: V95/V96 stylesheet-only guards did not resolve the user's real iPad Safari rendering. V97 makes the compact-header rule page-local and higher-priority.
