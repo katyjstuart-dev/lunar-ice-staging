@@ -1,0 +1,9 @@
+V96 — definitive iPad/tablet header fix
+
+The previous width-only breakpoint could still miss some iPad Safari landscape configurations. V96 forces the compact MENU header on:
+- all viewports below 1500 CSS px; and
+- touch-primary/coarse-pointer devices regardless of reported width.
+
+The full horizontal desktop navigation is therefore reserved for wide, hover-capable, fine-pointer screens. This prevents the right-hand WhatsApp/navigation controls from clipping off-screen on iPad.
+
+All HTML pages reference site-v69.css?v=96 to force a fresh stylesheet request.
