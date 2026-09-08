@@ -2144,3 +2144,204 @@ body{padding-top:96px}
     max-height:144px!important;
   }
 }
+
+/* =========================================================
+   V106 — MATCH THE APPROVED 8 SEP MOCKUP
+   This is the real website implementation of the approved visual.
+   ========================================================= */
+
+@media (min-width:1181px){
+
+  /* Tall, confident header matching the approved mockup */
+  .top{
+    background:#0D174D!important;
+  }
+
+  .top .topin{
+    width:100%!important;
+    max-width:none!important;
+    min-height:190px!important;
+    height:190px!important;
+    margin:0!important;
+    padding:0 clamp(40px,4.2vw,68px)!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:30px!important;
+    box-sizing:border-box!important;
+  }
+
+  .top .brand.brandtype{
+    flex:0 0 255px!important;
+    width:255px!important;
+    max-width:255px!important;
+    height:170px!important;
+    max-height:170px!important;
+    display:flex!important;
+    align-items:center!important;
+    margin:0!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:255px!important;
+    max-width:255px!important;
+    height:170px!important;
+    max-height:170px!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+    margin:0!important;
+  }
+
+  .top .nav{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    margin-left:auto!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:18px!important;
+  }
+
+  .top .nav>a,
+  .top .nav .navdrop{
+    font-size:12px!important;
+    line-height:1.1!important;
+    padding:10px 0!important;
+    white-space:nowrap!important;
+    letter-spacing:0!important;
+  }
+
+  .top .nav .walink{
+    display:inline-flex!important;
+    align-items:center!important;
+    padding:13px 18px!important;
+    font-size:12px!important;
+    margin-left:10px!important;
+  }
+
+  /* Hero proportions + vertical placement matching the approved mockup */
+  .hero{
+    height:665px!important;
+    min-height:665px!important;
+    max-height:665px!important;
+  }
+
+  .heroCopy{
+    height:100%!important;
+    justify-content:center!important;
+    padding-top:70px!important;
+    padding-bottom:26px!important;
+    box-sizing:border-box!important;
+  }
+
+  .heroCopy .wrap{
+    width:min(1280px,92vw)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .hero .eyebrow{
+    margin-bottom:16px!important;
+  }
+
+  .hero h1{
+    font-size:clamp(70px,6vw,92px)!important;
+    line-height:.93!important;
+    margin:0 0 28px!important;
+    max-width:720px!important;
+  }
+
+  .heroCopy>p{
+    font-size:18px!important;
+    line-height:1.5!important;
+    max-width:700px!important;
+    margin:0!important;
+  }
+
+  .heroActions{
+    margin-top:30px!important;
+  }
+
+  .hero-punch-v52{
+    margin-top:18px!important;
+  }
+
+  .heroMeta{
+    margin-top:26px!important;
+    padding-top:18px!important;
+    max-width:620px!important;
+  }
+
+  /* Four feature boxes exactly below the hero and cleanly aligned */
+  .approved-strip-v45 .trustgrid{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  }
+
+  .approved-strip-v45 .trustgrid>div{
+    min-height:165px!important;
+    padding:28px 30px!important;
+    display:grid!important;
+    grid-template-columns:36px minmax(0,1fr)!important;
+    grid-template-rows:auto auto!important;
+    column-gap:16px!important;
+    row-gap:8px!important;
+    align-content:center!important;
+    position:relative!important;
+  }
+
+  .approved-strip-v45 .trusticon{
+    position:static!important;
+    grid-column:1!important;
+    grid-row:1 / span 2!important;
+    width:31px!important;
+    height:31px!important;
+    margin:0!important;
+    align-self:start!important;
+  }
+
+  .approved-strip-v45 b{
+    grid-column:2!important;
+    grid-row:1!important;
+    margin:0!important;
+    font-size:14px!important;
+    line-height:1.18!important;
+  }
+
+  .approved-strip-v45 .trustgrid>div>span:last-child{
+    grid-column:2!important;
+    grid-row:2!important;
+    margin:0!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+  }
+}
+
+/* iPad portrait / smaller tablet — keep the same spacious brand feel, switch to compact menu */
+@media (min-width:761px) and (max-width:1180px){
+  .top .topin{
+    min-height:132px!important;
+    height:132px!important;
+    padding:0 34px!important;
+  }
+
+  .top .brand.brandtype{
+    flex:0 0 205px!important;
+    width:205px!important;
+    max-width:205px!important;
+    height:118px!important;
+    max-height:118px!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:205px!important;
+    max-width:205px!important;
+    height:118px!important;
+    max-height:118px!important;
+  }
+
+  .heroCopy{
+    padding-top:42px!important;
+  }
+}

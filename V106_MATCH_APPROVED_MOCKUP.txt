@@ -1,0 +1,13 @@
+LUNAR ICE V106 — MATCH APPROVED MOCKUP
+
+Implemented from the approved visual:
+- desktop/iPad landscape header increased to 190px;
+- Lunar Ice logo enlarged to 255px wide in a 170px-high box;
+- stronger side gutters and better nav spacing;
+- hero fixed at 665px and copy moved lower by 70px so it sits visually between header and feature strip;
+- heading scale increased to match the approved composition;
+- four feature boxes retained as a clean icon/text grid with 165px height;
+- V104/V105 proof-box fixes retained;
+- cache refs bumped to v106.
+
+This is the actual website implementation, not an image mockup.
