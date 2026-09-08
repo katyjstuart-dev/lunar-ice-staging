@@ -1,0 +1,7 @@
+LUNAR ICE V99 — HEADER PRIORITY FIX
+
+Commercial & Bulk remains a top-level navigation item because it is a major revenue service.
+The iPad/medium-desktop header width is fixed by removing only the redundant Home text link at 1000–1499px (the logo remains the Home link), tightening nav gaps/padding, and slightly reducing the header logo footprint.
+Commercial & Bulk is NOT hidden inside Products.
+Mobile remains burger navigation below 1000px.
+Desktop 1500px+ retains the full Home text link.

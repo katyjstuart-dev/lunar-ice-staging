@@ -1,0 +1,15 @@
+LUNAR ICE V98 — HEADER ROOT-CAUSE FIX
+
+Root cause identified by comparing V67 (working header) with V68+ builds:
+V68 moved Commercial & Bulk from the Products dropdown into the top-level navigation.
+That extra wide top-level item increased header width enough to overflow on iPad landscape.
+
+V98 fix:
+- Based on V94 SEO/Search Console/Backlink-locked baseline (before V95-V97 breakpoint hacks).
+- Restores the slimmer pre-V68 navigation structure: Commercial & Bulk is back inside Products.
+- Keeps Delivery as the shorter top-level dropdown label.
+- Keeps all V94 SEO, URL, canonical, redirect, national relevance, wellness and Luna/Lunar protections.
+- Does NOT use the V95/V96/V97 forced iPad breakpoint/inline-guard workaround.
+- CSS cache references bumped to v98.
+
+Principle: fix the navigation-width regression at its source rather than hiding the desktop header on iPad.
