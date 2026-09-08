@@ -1,0 +1,11 @@
+LUNAR ICE V102 — RESTORED HEADER BASELINE
+8 Sep 2026
+
+Purpose:
+- Restore the header/hero proportions from the last clean V94 baseline.
+- Remove the later V99/V100/V101 visual override stack that compressed/reworked the header and opening hero on iPad/medium-landscape.
+- Keep all current V101 page content, SEO files, imagery, forms, sitemap, robots and .htaccess in place.
+- No copy rewrite and no URL restructuring in this revision.
+- CSS cache reference bumped to v=102.
+
+This is a visual rollback of the later header/hero overrides, not a rollback of the site content.
