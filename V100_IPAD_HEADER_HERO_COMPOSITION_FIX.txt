@@ -1,0 +1,9 @@
+V100 — 8 Sep 2026
+
+- Commercial & Bulk remains a top-level navigation item.
+- iPad/medium header restored to 94vw with proper left/right gutters.
+- Lunar Ice header logo restored to 132px rather than the over-shrunk 96px V99 treatment.
+- Header nav spacing/font tightened only enough to retain all major top-level items plus WhatsApp.
+- Redundant Home text remains hidden at medium widths because logo links home.
+- Homepage hero height reduced on 1000–1499px widths so the opening page composition and trust-bar copy are visible without being clipped at the bottom of the first screen.
+- Trust-bar vertical padding tightened for iPad landscape.
