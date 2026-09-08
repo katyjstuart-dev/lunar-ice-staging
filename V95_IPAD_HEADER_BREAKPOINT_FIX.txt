@@ -1,0 +1,16 @@
+V95 — IPAD / MEDIUM-LANDSCAPE HEADER BREAKPOINT FIX
+8 Sep 2026
+
+Problem found during real iPad Safari review:
+- the complete desktop navigation remained active at an iPad landscape-sized viewport;
+- the combined logo + nav + WhatsApp width exceeded the available viewport;
+- the right-hand WhatsApp navigation item was visibly clipped off-screen.
+
+Fix:
+- 1000px–1399px now uses the intentional compact/burger navigation;
+- full desktop navigation is reserved for viewports 1400px and wider;
+- compact menu retains all links, Delivery/Product dropdowns and WhatsApp;
+- menu is width-contained and vertically scrollable if necessary;
+- CSS cache query bumped to v=95 throughout HTML so GitHub Pages / Safari does not retain the old header CSS.
+
+This is a responsive-only correction. SEO URLs, canonicals, sitemap, redirects, Search Console protections and site copy are unchanged.
