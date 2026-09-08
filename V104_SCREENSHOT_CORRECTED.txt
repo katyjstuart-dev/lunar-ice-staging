@@ -1,0 +1,11 @@
+LUNAR ICE V104 — SCREENSHOT-CORRECTED LAYOUT
+
+This revision is based directly on Katy's iPad screenshot.
+
+Fixes:
+- header raised to 126px;
+- logo image box raised to 205 x 118px so object-fit no longer shrinks the wide logo;
+- guaranteed 38–64px side gutters, so the logo cannot sit on the screen edge;
+- proof strip rebuilt with CSS Grid: icon in its own column, heading/copy in a separate column;
+- removed the icon/text collision visible in the screenshot;
+- CSS and logo cache refs bumped to v104.

@@ -2000,3 +2000,122 @@ body{padding-top:96px}
   .wrap{width:auto!important;margin-left:22px!important;margin-right:22px!important}
   .top .topin{width:auto!important;margin-left:20px!important;margin-right:20px!important}
 }
+
+/* =========================================================
+   V104 — SCREENSHOT-CORRECTED IPAD / DESKTOP LAYOUT
+   Based directly on the 8 Sep iPad screenshot.
+   ========================================================= */
+
+@media (min-width:1181px){
+  /* GUARANTEED visible side gutters and materially taller header */
+  .top .topin{
+    box-sizing:border-box!important;
+    width:100%!important;
+    max-width:none!important;
+    min-height:126px!important;
+    height:126px!important;
+    margin:0!important;
+    padding-left:clamp(38px,4vw,64px)!important;
+    padding-right:clamp(38px,4vw,64px)!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:22px!important;
+  }
+
+  /* The artwork is tall, so the image box must be tall too or object-fit shrinks it.
+     This is the actual cause of the small-looking logo in V103. */
+  .top .brand.brandtype{
+    flex:0 0 205px!important;
+    width:205px!important;
+    max-width:205px!important;
+    height:118px!important;
+    max-height:118px!important;
+    margin:0!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:205px!important;
+    max-width:205px!important;
+    height:118px!important;
+    max-height:118px!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+    margin:0!important;
+  }
+
+  .top .nav{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    margin-left:auto!important;
+    gap:11px!important;
+    justify-content:flex-end!important;
+    align-items:center!important;
+  }
+
+  .top .nav>a,
+  .top .nav .navdrop{
+    font-size:11.5px!important;
+    line-height:1.15!important;
+    padding:10px 0!important;
+    white-space:nowrap!important;
+  }
+
+  .top .nav .walink{
+    padding:10px 12px!important;
+    font-size:11.5px!important;
+  }
+
+  /* Proof strip rebuilt as a real 2-column internal layout:
+     icon in its own column, heading/copy in theirs. No absolute overlap. */
+  .approved-strip-v45 .trustgrid{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  }
+
+  .approved-strip-v45 .trustgrid>div{
+    position:relative!important;
+    min-height:132px!important;
+    height:auto!important;
+    padding:22px 22px!important;
+    display:grid!important;
+    grid-template-columns:34px minmax(0,1fr)!important;
+    grid-template-rows:auto auto!important;
+    column-gap:14px!important;
+    row-gap:7px!important;
+    align-content:center!important;
+    justify-content:stretch!important;
+  }
+
+  .approved-strip-v45 .trusticon{
+    position:static!important;
+    grid-column:1!important;
+    grid-row:1 / span 2!important;
+    align-self:start!important;
+    justify-self:start!important;
+    width:30px!important;
+    height:30px!important;
+    margin-top:1px!important;
+  }
+
+  .approved-strip-v45 b{
+    grid-column:2!important;
+    grid-row:1!important;
+    display:block!important;
+    margin:0!important;
+    font-size:13.5px!important;
+    line-height:1.18!important;
+  }
+
+  .approved-strip-v45 .trustgrid>div>span:last-child{
+    grid-column:2!important;
+    grid-row:2!important;
+    display:block!important;
+    margin:0!important;
+    font-size:12px!important;
+    line-height:1.42!important;
+  }
+}
