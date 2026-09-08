@@ -7,7 +7,7 @@ if(!$name || !$telephone || !$email || !$repeat || strtolower($email)!==strtolow
 $fields=[
 'Name'=>$name,'Telephone'=>$telephone,'Email'=>$email,
 'Delivery date'=>clean($_POST['delivery_date']??''),'Preferred 2-hour slot'=>clean($_POST['delivery_time']??''),
-'Delivery postcode'=>clean($_POST['postcode']??''),'What3Words / access'=>clean($_POST['what3words']??''),
+'Delivery postcode'=>clean($_POST['postcode']??''),
 'Ice type'=>clean($_POST['ice_type']??''),'Purpose'=>clean($_POST['purpose']??''),'Quantity'=>clean($_POST['quantity']??''),
 'How they heard about us'=>clean($_POST['heard']??''),'Message'=>trim((string)($_POST['message']??''))];
 $body="New Lunar Ice website enquiry\n\n"; foreach($fields as $k=>$v){$body.=$k.": ".$v."\n";}

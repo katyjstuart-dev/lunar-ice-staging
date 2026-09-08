@@ -1,0 +1,13 @@
+LUNAR ICE V103 — VISIBLE LAYOUT FIX
+
+This revision makes the visual changes that V102 failed to make obvious:
+- header restored to a visibly taller 104px on desktop/iPad landscape;
+- logo restored to 176px wide with proper left/right page gutters;
+- medium tablets keep a larger 168px logo and use the compact menu rather than shrinking the brand;
+- the V99/V100/V101 stacked header/hero overrides were removed;
+- homepage hero restored from the forced 510px height to a 640–760px composition;
+- four proof/text boxes now size naturally so copy lands cleanly instead of being forced into chopped fixed-height boxes;
+- sub-page copy panels and main content use consistent 92vw gutters;
+- contact ice selector restored to the agreed Cubed / Crushed choices;
+- stale What3Words backend field removed;
+- cache version bumped to v103.

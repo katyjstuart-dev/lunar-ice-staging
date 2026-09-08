@@ -1834,3 +1834,169 @@ body{padding-top:96px}
 .home-review-rotator{position:relative;min-height:54px;display:flex;align-items:center}.home-review{position:absolute;inset:auto 0;opacity:0;transform:translateY(8px);transition:.55s ease;margin:0;font-size:17px;font-weight:700;line-height:1.45}.home-review.active{opacity:1;transform:none}.home-review-inner>a{color:#B0BC70;font-size:11px;font-weight:900;text-decoration:none;white-space:nowrap}
 .contactform label{margin-bottom:4px!important}.contactform .form-row{gap:24px 20px!important;margin-bottom:24px!important}
 @media(max-width:800px){body{padding-top:78px}.areaCards{grid-template-columns:1fr!important}.home-review-inner{grid-template-columns:1fr;gap:8px;padding:18px 0}.home-review-rotator{min-height:72px}.home-review-inner>a{margin-top:2px}.v87-postcode-copy{padding-left:18px}.v82-steps .tile{padding:18px 16px!important}}
+
+
+/* =========================================================
+   V103 — VISIBLE HEADER + ALIGNMENT RESTORATION
+   Restores brand scale, proper gutters and clean card/text alignment.
+   ========================================================= */
+
+/* Keep the overall site content off the screen edges. */
+.wrap{
+  width:min(1280px,92vw)!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+
+/* Desktop + iPad landscape: visibly taller header and larger logo. */
+@media (min-width:1181px){
+  body{padding-top:0!important}
+
+  .top .topin{
+    width:min(1280px,92vw)!important;
+    max-width:1280px!important;
+    min-height:104px!important;
+    height:104px!important;
+    margin:0 auto!important;
+    padding:0!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:20px!important;
+  }
+
+  .top .brand.brandtype{
+    flex:0 0 176px!important;
+    width:176px!important;
+    max-width:176px!important;
+    height:76px!important;
+    margin:0!important;
+    overflow:visible!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:176px!important;
+    max-width:176px!important;
+    height:76px!important;
+    max-height:76px!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+  }
+
+  .top .nav{
+    flex:1 1 auto!important;
+    min-width:0!important;
+    margin-left:auto!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:12px!important;
+  }
+
+  .top .nav>a,
+  .top .nav .navdrop{
+    font-size:11.5px!important;
+    line-height:1.15!important;
+    padding:10px 0!important;
+    white-space:nowrap!important;
+  }
+
+  .top .nav .walink{
+    display:inline-flex!important;
+    padding:10px 12px!important;
+    font-size:11.5px!important;
+    margin-left:2px!important;
+  }
+
+  .menuBtn{display:none!important}
+
+  /* Restore the opening panel height rather than squashing it to 510px. */
+  .hero{
+    height:min(760px,76vh)!important;
+    min-height:640px!important;
+    max-height:760px!important;
+  }
+
+  .heroCopy{
+    justify-content:center!important;
+    padding-top:24px!important;
+    padding-bottom:24px!important;
+  }
+
+  .hero h1{
+    font-size:clamp(62px,6vw,88px)!important;
+    margin:14px 0 20px!important;
+  }
+
+  .heroCopy>p{
+    font-size:18px!important;
+    line-height:1.5!important;
+    max-width:720px!important;
+  }
+
+  .heroActions{margin-top:20px!important}
+  .hero-punch-v52{margin-top:24px!important}
+  .heroMeta{margin-top:24px!important;padding-top:14px!important}
+
+  /* Let the four proof boxes size naturally so text lands cleanly. */
+  .approved-strip-v45 .trustgrid>div{
+    min-height:0!important;
+    height:auto!important;
+    padding:20px 22px!important;
+  }
+
+  .approved-strip-v45 .trustgrid>div>span:last-child{
+    display:block!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+    margin-top:6px!important;
+  }
+
+  /* Sub-page text panels line up to the same visual gutter as the rest of the site. */
+  .subheroCopy .wrap{
+    width:auto!important;
+    max-width:620px!important;
+    margin-left:clamp(46px,5vw,76px)!important;
+    margin-right:clamp(46px,5vw,76px)!important;
+  }
+
+  .section .wrap,
+  .footer .wrap{
+    width:min(1280px,92vw)!important;
+  }
+}
+
+/* Narrower tablets: use the intentional compact menu so the logo does not have to be shrunk. */
+@media (min-width:761px) and (max-width:1180px){
+  .top .topin{
+    width:92vw!important;
+    min-height:96px!important;
+    height:96px!important;
+    margin:0 auto!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:18px!important;
+  }
+
+  .top .brand.brandtype{
+    flex:0 0 168px!important;
+    width:168px!important;
+    max-width:168px!important;
+    height:72px!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:168px!important;
+    max-width:168px!important;
+    height:72px!important;
+    max-height:72px!important;
+  }
+
+  .top .menuBtn{display:inline-flex!important}
+}
+
+/* Phones: keep breathing room without making the header huge. */
+@media (max-width:760px){
+  .wrap{width:auto!important;margin-left:22px!important;margin-right:22px!important}
+  .top .topin{width:auto!important;margin-left:20px!important;margin-right:20px!important}
+}
