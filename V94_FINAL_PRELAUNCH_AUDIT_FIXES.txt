@@ -1,0 +1,41 @@
+LUNAR ICE V94 — SEARCH CONSOLE + BACKLINK-AWARE PRE-LAUNCH LOCK — 8 SEP 2026
+
+NON-NEGOTIABLE MIGRATION RULE
+Existing Google performance and accumulated signals outrank cosmetic URL preferences. Retain established URLs wherever possible. If a move is genuinely necessary, use one direct permanent 301 to the closest intent-equivalent destination. No redirect chains. Internal links, canonicals, sitemap and schema must agree.
+
+SEARCH CONSOLE PERFORMANCE ASSETS PROTECTED
+- / remains canonical homepage.
+- /ice-.html retained as the canonical Products page. /products.html and /our-products.html 301 directly to it.
+- /faqs.html retained as canonical FAQ page. /faqs-blog.html 301 directly to it.
+- /why-choose-us-.html retained as canonical About page. /about.html 301 directly to it.
+- /brands---venues-.html retained as canonical Brands & Venues page. /brands-venues.html and /gallery.html 301 directly to it.
+- /surrey.html, /kent.html, /sussex.html, /further-afield.html, /contact.html, /ice-delivery-explained.html, /commercial-bulk-deliveries.html, /cubed-ice.html and /crushed-ice.html retained.
+- Generic national relevance protected alongside strong local relevance: ice delivery, ice delivery near me, bulk ice delivery, supplier intent, county searches and wider England enquiries.
+- Luna Ice misspelling captured naturally without weakening the correct Lunar Ice brand.
+
+LEGACY BLOG HANDLING
+There is no visible blog in the new site. Useful historic blog URLs are preserved only as direct one-hop redirects to the closest live commercial page:
+- wedding/chill-your-drinks-in-style -> /weddings-events.html
+- the-chill-factor -> /ice-delivery-explained.html
+- the-luna-ice-mishap -> /why-choose-us-.html
+- embracing-the-chill / cold-water / ice-bath relevance -> /cubed-ice.html
+- bare /blog/ root with no query -> homepage
+- archive/tag/author/month leftovers with no close replacement -> 410 Gone
+
+BACKLINK / LINKS REPORT
+The user has already supplied Top linked pages and Top linking sites information during the project. Treat that as existing migration evidence and DO NOT ask the user to repeat it. Preserve every known externally linked destination by keeping the exact URL or a direct 301 to the closest equivalent. If exact counts/domains are not present in a working file, do not invent them; preserve all known legacy targets already represented in the migration rules and project decisions.
+
+V94 TECHNICAL AUDIT RESULTS
+- 23 HTML pages audited.
+- 0 broken local links/assets.
+- 0 internal links to redirect-only aliases (about.html, brands-venues.html, products.html, our-products.html, faqs-blog.html).
+- 0 redirect-only alias URLs in sitemap.
+- Alias fallback files use canonical tags pointing to the retained Search Console canonical URLs.
+- robots.txt allows crawling and references the canonical HTTPS sitemap.
+- Known legacy blog redirects are direct one-hop mappings.
+- HTTP/non-www normalization preserves the requested path.
+- No visible blog navigation or blog URLs in sitemap.
+- Wellness/ice-bath/cold-water-therapy relevance is preserved on /cubed-ice.html.
+
+GO-LIVE RULE
+Do not overwrite the live IONOS site until the final deployment sanity check is complete. After launch, monitor Search Console indexing, clicks, impressions, average position and redirect behaviour for both generic and local queries, with special attention to /ice-.html, /faqs.html and the homepage.

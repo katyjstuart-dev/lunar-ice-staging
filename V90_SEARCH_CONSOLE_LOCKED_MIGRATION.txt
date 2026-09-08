@@ -1,0 +1,69 @@
+LUNAR ICE V90 — SEARCH CONSOLE LOCKED MIGRATION
+Date: 8 Sep 2026
+
+NON-NEGOTIABLE MIGRATION RULE
+Existing Google performance is the authority. Preserve an existing performing/indexed URL exactly wherever technically possible, regardless of how unattractive its filename is. Only redirect when genuinely necessary; every redirect must be a single direct permanent 301 to the closest intent-equivalent destination. Never sacrifice accumulated Search Console signals for cleaner URLs.
+
+SEARCH CONSOLE PAGE ASSETS REVIEWED
+RETAINED AS PRIMARY CANONICALS:
+/ — strongest aggregate page; HTTPS/www becomes the single canonical home.
+/surrey.html — 502 clicks / 4,680 impressions.
+/ice-.html — 482 / 16,985; retained as Products page identity.
+/kent.html — 445 / 5,813.
+/sussex.html — 191 / 2,983.
+/further-afield.html — 43 / 1,710.
+/faqs.html — 40 / 8,121 / avg pos 4.09; retained.
+/why-choose-us-.html — 32 / 2,205; V90 now retains this exact URL as the About page identity rather than redirecting it away.
+/contact.html — 24 / 1,196.
+/ice-delivery-explained.html — 20 / 2,299.
+/commercial-bulk-deliveries.html — 19 / 1,536.
+/cubed-ice.html — 10 / 2,719.
+/crushed-ice.html — 5 / 4,190.
+/brands---venues-.html — 1 / 241; V90 retains exact legacy URL.
+
+INTENT-EQUIVALENT DIRECT 301s WHERE THE OLD RESOURCE CANNOT PRACTICALLY REMAIN:
+Wedding ice-stations blog query URL (48 clicks / 2,363 impressions plus alternate query form 16 / 509) -> /weddings-events.html.
+The Chill Factor blog query (2 / 1,061) -> /ice-delivery-explained.html.
+Luna Ice Mishap blog query (2 / 149) -> /why-choose-us-.html.
+Ice-bath / cold-water therapy blog query (0 / 424) is a legitimate Lunar Ice use case. As of V92 it redirects directly to /cubed-ice.html, the 12kg cubed product page, because Lunar Ice supplies wellness retreats, cold-water therapy and ice baths.
+/gallery.html (0 / 21) -> retained Brands & Venues URL.
+/..html (0 / 26) -> home.
+Remaining /blog/ routes -> /faqs.html DIRECTLY. V89's accidental /blog/ -> /faqs-blog.html -> /faqs.html chain has been removed.
+
+HOST/PROTOCOL CONSOLIDATION
+Historic http://www homepage generated 1,871 clicks / 33,604 impressions. It must permanently 301 to the matching https://www URL while preserving path. HTTPS www is canonical throughout. This is consolidation, not deletion of the old signal.
+
+QUERY THEMES PROTECTED IN PAGE COPY/METADATA/ARCHITECTURE
+Core: ice delivery; ice delivery near me; ice cube delivery near me; ice supplier(s) near me; ice delivered; local/home/party/event delivery.
+Commercial: bulk ice delivery; bulk ice; buy ice in bulk; wholesale/commercial ice delivery; large ice delivery; bagged ice delivery.
+Products: cubed ice, crushed ice, 12kg bags; crushed/cubed product pages retained independently because both have established impressions.
+Local strength: Kent (position 1.63 query), Surrey (4.37), Sussex, Hampshire (2.4 query), Brighton, Bromley, Guildford, Croydon, Richmond, Reading, Southampton, Bournemouth etc where genuinely relevant.
+Broader reach: London and wider England visibility must not be narrowed away. Further Afield and commercial pages retain broad large-volume positioning; no fake doorway city/county pages.
+Weddings/events: existing wedding blog authority is mapped to the wedding/event page. Wedding meta description no longer states only Sussex/Surrey/Kent.
+Same-day/emergency: retain natural relevance but never promise availability that operations cannot guarantee.
+Irrelevant queries such as dry ice, machinery and unrelated global price searches are NOT optimisation targets merely because they have impressions. Ice baths/cold-water therapy ARE legitimate Lunar Ice commercial use cases and must not be treated as irrelevant.
+
+CTR / OPPORTUNITY OBSERVATIONS FROM GSC
+Crushed ice has large visibility but weak historic CTR/ranking (e.g. 'crushed ice' 5,942 impressions, avg pos 24.11; old page 4,190 impressions). Keep the exact /crushed-ice.html URL and improve relevance without changing identity.
+Cubed ice likewise has established visibility (old page 2,719 impressions; 'cubed ice' avg pos 8.52 but low CTR). Preserve URL and intent.
+'ice delivery' and 'ice delivery near me' already average page-one territory; homepage remains broad rather than being narrowed to three counties.
+
+DEVICE / MARKET SIGNALS
+Mobile is the dominant click source (3,889 clicks, 5.66% CTR, avg pos 9.08), so mobile usability and content parity are ranking/revenue-critical. Desktop remains fully crawlable and content-equivalent.
+UK is overwhelmingly the commercial market (5,817 clicks). Foreign impressions are not a reason to internationalise or dilute UK/local relevance.
+
+TECHNICAL CHECKLIST
+- Strong legacy URLs retained where possible.
+- One-hop 301s only for genuine moves.
+- No redirect chains in declared migration rules.
+- Canonicals self-reference retained canonical pages.
+- Internal navigation points directly at retained canonical URLs.
+- Sitemap contains canonical URLs, not redirect sources.
+- robots.txt keeps sitemap discoverable and does not block migrated content.
+- HTTPS/www normalisation preserves paths.
+- Structured data must remain valid.
+- 404 retained.
+- Post-launch: resubmit sitemap, inspect priority URLs, monitor Page indexing + redirects + query/page clicks/impressions/CTR/position. Do not request removal of harmless historical URLs just because they are old.
+
+GO-LIVE GATE
+Do not deploy until the final migration table and technical validation pass are clean. Do not call the migration successful on launch day; Search Console monitoring after launch is part of the migration.

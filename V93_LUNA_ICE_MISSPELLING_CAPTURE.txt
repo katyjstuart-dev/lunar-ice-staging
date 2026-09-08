@@ -1,0 +1,3 @@
+V93 — LUNA ICE MISSPELLING CAPTURE
+
+Added a natural FAQ on the canonical /faqs.html page to capture the common navigational misspelling “Luna Ice” while keeping “Lunar Ice” as the dominant brand everywhere else. No keyword stuffing; no change to titles, H1s, schema business name, canonicals or primary branding.

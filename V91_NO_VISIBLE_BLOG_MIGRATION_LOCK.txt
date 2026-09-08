@@ -1,0 +1,21 @@
+LUNAR ICE V91 — NO VISIBLE BLOG / SEARCH CONSOLE MIGRATION LOCK
+Date: 2026-09-08
+
+DECISION
+- The new Lunar Ice website does NOT expose a Blog link, Blog navigation item, blog index, or blog content section.
+- Blog content is not required simply for SEO. Core commercial/service pages carry the search strategy.
+- A blog/guides section can be added later only if there is a genuine customer/search opportunity.
+
+SEARCH CONSOLE PROTECTION
+- Valuable historic blog URLs are NOT discarded blindly.
+- The historic wedding article containing "chill-your-drinks-in-style" redirects in ONE permanent 301 hop to /weddings-events.html.
+- The historic "the-chill-factor" article redirects in ONE permanent 301 hop to /ice-delivery-explained.html.
+- The historic "the-luna-ice-mishap" article redirects in ONE permanent 301 hop to the retained /why-choose-us-.html URL.
+- CORRECTED IN V92: the historic cold-water/ice-bath article is commercially relevant because Lunar Ice supplies wellness retreats, cold-water therapy and ice baths. It now redirects in ONE permanent 301 hop to /cubed-ice.html.
+- The bare /blog/ and /blog/index.php route redirects directly to the homepage in one hop.
+- Old blog archive/tag/author/month paths return 410 Gone rather than being recreated or soft-404 redirected.
+- No /blog/ URL is present in sitemap.xml.
+- No visible HTML page contains a Blog navigation/link label.
+
+NON-NEGOTIABLE MIGRATION RULE
+Search Console performance and current ranking signals override cosmetic URL preferences. Existing commercial URLs are retained wherever viable. If a legacy URL must move, use a single direct 301 to the closest intent-equivalent destination. No chains, no mass irrelevant redirects, no accidental narrowing of national ice-delivery relevance.

@@ -1,0 +1,13 @@
+LUNAR ICE V92 — WELLNESS / ICE-BATH SIGNAL PROTECTION
+Date: 2026-09-08
+
+CORRECTION
+- Wellness retreats, cold-water therapy and ice baths are genuine Lunar Ice commercial use cases.
+- The historic blog URL/query containing "embracing-the-chill" must NOT return 410.
+- It now redirects in ONE direct permanent 301 hop to /cubed-ice.html.
+- /cubed-ice.html is retained as its established Search Console URL and remains canonical.
+- The 12kg cubed product page now naturally states that 12kg cubed ice is suitable for wellness retreats, cold-water therapy and ice baths.
+- No visible blog is reintroduced. The legacy blog URL exists only as a migration route.
+
+MIGRATION RULE
+Search Console performance, real customer use cases and existing ranking signals override cosmetic URL preferences. Do not discard a historic query/URL as irrelevant until it has been checked against actual Lunar Ice services.

@@ -1817,3 +1817,20 @@ body{padding-top:0!important}
  .v82-steps .tile p,.v82-cardgrid .tile p{font-size:14px!important;line-height:1.48!important}
  .v82-service-copy .lead,.v82-service-copy p,.v82-booking p{font-size:15px!important;line-height:1.58!important}
 }
+
+
+/* V87 — review pass: persistent header, tighter delivery cards, review strip, form clarity */
+.top{position:fixed!important;top:0;left:0;right:0;width:100%;z-index:1000!important}
+body{padding-top:96px}
+.areaCards{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.v82-steps .tile{padding:24px 20px!important;min-height:0!important}
+.v82-steps .tile p{font-size:14px!important;line-height:1.5!important}
+.v87-booking{border-top:8px solid #B0BC70}
+.v87-booking h2{color:#0D174D!important}.v87-booking .lead,.v87-booking p{color:#4f5873!important}
+.v87-postcode{position:relative}.v87-postcode:before{content:"";display:block;height:8px;background:#B0BC70;position:absolute;left:0;right:0;top:0}.v87-postcode-copy{border-left:4px solid #B0BC70;padding-left:28px}
+.home-review-strip{background:#0D174D;color:#fff;border-top:1px solid rgba(255,255,255,.12);border-bottom:6px solid #B0BC70}
+.home-review-inner{min-height:112px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
+.home-review-label span{display:block;color:#B0BC70;letter-spacing:.12em;font-size:18px}.home-review-label b{font-size:10px;letter-spacing:.14em}
+.home-review-rotator{position:relative;min-height:54px;display:flex;align-items:center}.home-review{position:absolute;inset:auto 0;opacity:0;transform:translateY(8px);transition:.55s ease;margin:0;font-size:17px;font-weight:700;line-height:1.45}.home-review.active{opacity:1;transform:none}.home-review-inner>a{color:#B0BC70;font-size:11px;font-weight:900;text-decoration:none;white-space:nowrap}
+.contactform label{margin-bottom:4px!important}.contactform .form-row{gap:24px 20px!important;margin-bottom:24px!important}
+@media(max-width:800px){body{padding-top:78px}.areaCards{grid-template-columns:1fr!important}.home-review-inner{grid-template-columns:1fr;gap:8px;padding:18px 0}.home-review-rotator{min-height:72px}.home-review-inner>a{margin-top:2px}.v87-postcode-copy{padding-left:18px}.v82-steps .tile{padding:18px 16px!important}}

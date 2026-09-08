@@ -1,0 +1,18 @@
+LUNAR ICE V88 — NATIONAL RELEVANCE PROTECTION PASS
+
+Built from V87 after confirming that existing broad “ice delivery” visibility and England-wide large-job enquiries are protected business assets.
+
+Changes:
+- Homepage title broadened from county-led title to “Ice Delivery | Cubed & Crushed Ice | Lunar Ice” so the root page is not framed as only Sussex/Surrey/Kent.
+- Homepage description retains Gatwick/South East strength while explicitly supporting larger-volume delivery across England.
+- LocalBusiness areaServed retains Sussex, Surrey and Kent and adds England as the wider service geography for suitable work.
+- Homepage delivery-area messaging keeps the three core counties but explicitly says larger-volume work can travel much further.
+- Further Afield page repositioned for genuine England-wide large-volume enquiries (pallet/multi-pallet/substantial requirements) without pretending every small order is nationwide.
+- Commercial page explicitly welcomes pallet, multi-pallet and larger-volume enquiries across England.
+- FAQ answer clarifies core counties are not a hard boundary.
+- Footer wording across public pages now reinforces regular South East routes + larger-volume delivery further across England.
+- No fake Newcastle/Norfolk/local doorway pages created.
+- Existing canonical URLs and migration redirects retained.
+
+BACKLINK / SEARCH CONSOLE NOTE:
+A Library search did not locate a Search Console external-links/backlink export. Before production deployment, obtain/export Search Console Links (Top linking sites + Top linked pages) and current Performance query data for generic terms such as “ice delivery”. Use that data as a migration protection check; do not change destination URLs casually.

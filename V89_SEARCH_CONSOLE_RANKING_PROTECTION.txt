@@ -1,0 +1,35 @@
+LUNAR ICE V89 — SEARCH CONSOLE RANKING PROTECTION
+Date: 8 Sep 2026
+
+Built from V88 after reviewing the user's 16-month Google Search Console export.
+
+KEY EXISTING ORGANIC ASSETS TO PROTECT
+- Homepage: very high click/impression volume across both historic http and https reporting.
+- /ice-.html: 482 clicks / 16,985 impressions — RETAINED as the canonical products URL rather than redirecting it away.
+- /faqs.html: 40 clicks / 8,121 impressions / avg position 4.09 — RETAINED as the canonical FAQ URL rather than redirecting it away.
+- /surrey.html: 502 clicks / 4,680 impressions.
+- /kent.html: 445 clicks / 5,813 impressions.
+- /sussex.html: 191 clicks / 2,983 impressions.
+- /further-afield.html: 43 clicks / 1,710 impressions.
+- /cubed-ice.html and /crushed-ice.html remain unchanged.
+
+HIGH-VALUE QUERY THEMES CONFIRMED
+- ice delivery near me: 300 clicks, avg position 8.99
+- ice delivery: 254 clicks, avg position 8.56
+- ice delivery kent: 95 clicks, avg position 1.63
+- ice delivery surrey: 67 clicks, avg position 4.37
+- bulk ice delivery: 61 clicks, avg position 5.36
+- ice cube delivery near me: 56 clicks, avg position 8.43
+- wider-area queries already generate visibility/clicks including London, Hampshire, Cambridge, Nottingham, Norfolk, Suffolk, Norwich, Southampton, Bournemouth and Cornwall.
+
+V89 ACTIONS
+1. Preserved /ice-.html as the actual canonical product page. /products.html and /our-products.html now 301 to it.
+2. Preserved /faqs.html as the actual canonical FAQ page. /faqs-blog.html now 301s to it.
+3. Internal links, canonicals and sitemap updated to point directly to these retained URLs.
+4. Homepage title kept broad around 'Ice Delivery' and expanded naturally to cubed, crushed and bulk ice.
+5. Delivery Areas title changed so Sussex/Surrey/Kent do not read as the business boundary.
+6. Wedding/Event title no longer artificially limits the page to three counties.
+7. Existing county, product, further-afield and commercial URLs retained.
+
+MIGRATION PRINCIPLE
+Preserve strong URLs wherever possible. Redirect only where a URL genuinely must move. Local county relevance must coexist with broader England/national relevance; do not create fake doorway pages for counties/cities not routinely served.
