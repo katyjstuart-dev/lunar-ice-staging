@@ -2424,3 +2424,41 @@ body{padding-top:96px}
     max-height:142px!important;
   }
 }
+
+/* =========================================================
+   V109 — FIRST-SCREEN INFO VISIBILITY FIX ONLY
+   Goal: keep the key hero answers visible on initial load.
+   No header, logo, nav, copy, imagery or card redesign changes.
+   ========================================================= */
+
+@media (min-width:1181px){
+  /* Give the hero enough vertical room for the full info stack. */
+  .hero{
+    height:720px!important;
+    min-height:720px!important;
+    max-height:720px!important;
+  }
+
+  /* Raise the content slightly within the hero so the punch line + meta line
+     remain fully visible above the four feature boxes. */
+  .heroCopy{
+    justify-content:center!important;
+    padding-top:54px!important;
+    padding-bottom:28px!important;
+  }
+
+  .heroActions{
+    margin-top:24px!important;
+  }
+
+  .hero-punch-v52{
+    margin-top:14px!important;
+    margin-bottom:0!important;
+  }
+
+  .heroMeta{
+    margin-top:18px!important;
+    padding-top:14px!important;
+    max-width:640px!important;
+  }
+}

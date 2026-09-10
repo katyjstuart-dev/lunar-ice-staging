@@ -1,0 +1,18 @@
+LUNAR ICE V109 — FIRST-SCREEN INFO VISIBILITY FIX ONLY
+
+Changes:
+- hero height increased to 720px on desktop/iPad landscape;
+- hero content raised slightly within the image;
+- spacing tightened so the punch line and lower service/meta line stay fully visible on first load;
+- four feature boxes remain directly below.
+
+Not changed:
+- header height;
+- logo size;
+- navigation;
+- copy;
+- imagery;
+- feature-box design;
+- SEO files;
+- forms;
+- URLs.
