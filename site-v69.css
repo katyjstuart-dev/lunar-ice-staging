@@ -2496,3 +2496,34 @@ body{padding-top:96px}
     margin:0!important;
   }
 }
+
+
+/* =========================================================
+   V115 — INTERNAL PAGE FIRST-SCREEN / SECTION FLOW SAFETY
+   Keeps internal page heroes and the section immediately
+   after them visually joined, with no accidental dead gap.
+   Homepage landing area intentionally untouched.
+   ========================================================= */
+.subhero{
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
+.subhero + .section,
+.subhero + .callout,
+main > .subhero + .section,
+main > .subhero + .callout{
+  margin-top:0!important;
+}
+@media (min-width:1181px){
+  /* Keep the first content hand-off tidy on large screens/iPad landscape. */
+  .subhero + .section,
+  main > .subhero + .section{
+    padding-top:58px!important;
+  }
+
+  /* Gallery-led real-work sections were carrying more empty white below
+     the final image row than the surrounding pages. */
+  .section.real-work{
+    padding-bottom:58px!important;
+  }
+}
