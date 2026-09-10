@@ -2499,31 +2499,64 @@ body{padding-top:96px}
 
 
 /* =========================================================
-   V115 — INTERNAL PAGE FIRST-SCREEN / SECTION FLOW SAFETY
-   Keeps internal page heroes and the section immediately
-   after them visually joined, with no accidental dead gap.
-   Homepage landing area intentionally untouched.
+   V116 — CLEAN INTERNAL-PAGE FIRST SCREEN
+   Desktop / iPad landscape only.
+   Goal: each internal page lands as one complete hero screen
+   rather than showing the next section half-cut underneath.
+   Homepage hero is intentionally NOT targeted.
    ========================================================= */
-.subhero{
-  margin-top:0!important;
-  margin-bottom:0!important;
-}
-.subhero + .section,
-.subhero + .callout,
-main > .subhero + .section,
-main > .subhero + .callout{
-  margin-top:0!important;
-}
 @media (min-width:1181px){
-  /* Keep the first content hand-off tidy on large screens/iPad landscape. */
-  .subhero + .section,
-  main > .subhero + .section{
-    padding-top:58px!important;
+
+  /* Standard internal-page split heroes */
+  .subhero{
+    min-height:max(560px, calc(100svh - 160px))!important;
+    height:auto!important;
   }
 
-  /* Gallery-led real-work sections were carrying more empty white below
-     the final image row than the surrounding pages. */
-  .section.real-work{
-    padding-bottom:58px!important;
+  .subheroCopy{
+    min-height:max(560px, calc(100svh - 160px))!important;
+    box-sizing:border-box!important;
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+  }
+
+  .subheroMedia{
+    min-height:max(560px, calc(100svh - 160px))!important;
+    height:auto!important;
+  }
+
+  .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:max(560px, calc(100svh - 160px))!important;
+    max-height:none!important;
+    object-fit:cover!important;
+  }
+
+  /* Keep long internal hero headings comfortable inside the first screen. */
+  .subhero h1{
+    font-size:clamp(46px,4.65vw,68px)!important;
+    line-height:.94!important;
+    margin-top:14px!important;
+    margin-bottom:20px!important;
+  }
+
+  .subhero p{
+    margin-bottom:0!important;
+  }
+
+  /* About page has its own hero instead of .subhero. */
+  .about54-hero{
+    min-height:max(560px, calc(100svh - 160px))!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+
+  /* No accidental gaps between the finished hero and the next section. */
+  .subhero + .section,
+  .subhero + .callout,
+  .about54-hero + section{
+    margin-top:0!important;
   }
 }
