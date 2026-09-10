@@ -1,0 +1,12 @@
+LUNAR ICE V108 — HEADER REBALANCE ONLY
+
+Based on the now-correct V107 header flow.
+ONLY changes:
+- desktop/iPad-landscape header: 190px -> 160px
+- matching body offset: 190px -> 160px
+- logo box: 255px wide -> 220px wide
+- logo height: 170px -> 142px
+
+Nothing else has been altered.
+Hero, page layout, copy, images, feature boxes, navigation content,
+SEO files, forms, URLs and responsive rules below 1181px remain V107.

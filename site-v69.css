@@ -2394,3 +2394,33 @@ body{padding-top:96px}
     padding-top:56px!important;
   }
 }
+
+/* =========================================================
+   V108 — HEADER REBALANCE ONLY
+   No hero, page content, cards, imagery or copy changes.
+   ========================================================= */
+@media (min-width:1181px){
+  body{
+    padding-top:160px!important;
+  }
+
+  .top .topin{
+    min-height:160px!important;
+    height:160px!important;
+  }
+
+  .top .brand.brandtype{
+    flex-basis:220px!important;
+    width:220px!important;
+    max-width:220px!important;
+    height:142px!important;
+    max-height:142px!important;
+  }
+
+  .top .brand.brandtype .brandart{
+    width:220px!important;
+    max-width:220px!important;
+    height:142px!important;
+    max-height:142px!important;
+  }
+}
