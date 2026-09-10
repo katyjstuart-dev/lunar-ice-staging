@@ -1,0 +1,14 @@
+LUNAR ICE V112 — FESTIVAL MENU + CONTRAST FIX
+
+Only two changes:
+1. Main navigation: "Weddings & Events" is now a dropdown with:
+   - Weddings & Events
+   - Festivals & Large Events
+   This exposes the festival page in the main menu without adding another wide top-level label and upsetting the fixed header.
+
+2. Festivals & Large Events page:
+   - "Security shut the gate?" is now lime green.
+   - supporting sentence is white.
+   This fixes the dark-on-dark readability issue.
+
+No homepage landing content, header dimensions, logo size, hero layout, imagery, copy sections, forms or SEO structure were changed.
