@@ -2569,8 +2569,31 @@ body{padding-top:96px}
 }
 @keyframes productRangeBreatheV120{
   0%,100%{transform:scale(1);filter:brightness(1)}
-  50%{transform:scale(1.018);filter:brightness(1.035)}
+  50%{transform:scale(1.008);filter:brightness(1.02)}
 }
 @media (prefers-reduced-motion:reduce){
   .subheroMedia .product-range-hero-v120{animation:none!important;transform:none!important;filter:none!important}
+}
+
+/* V122 — match the hero copy panel exactly and never crop the product artwork. */
+.subheroMedia.product-range-media-v122{
+  background:#0D174D!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+.subheroMedia.product-range-media-v122 .product-range-hero-v120{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#0D174D!important;
+}
+@media(max-width:960px){
+  .subheroMedia.product-range-media-v122 .product-range-hero-v120{
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1/1!important;
+  }
 }
