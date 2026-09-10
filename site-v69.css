@@ -2560,3 +2560,17 @@ body{padding-top:96px}
     margin-top:0!important;
   }
 }
+
+/* V120 — gentle motion and depth for the neutral Products overview artwork. */
+.subheroMedia .product-range-hero-v120{
+  transform-origin:center;
+  animation:productRangeBreatheV120 7s ease-in-out infinite;
+  will-change:transform,filter;
+}
+@keyframes productRangeBreatheV120{
+  0%,100%{transform:scale(1);filter:brightness(1)}
+  50%{transform:scale(1.018);filter:brightness(1.035)}
+}
+@media (prefers-reduced-motion:reduce){
+  .subheroMedia .product-range-hero-v120{animation:none!important;transform:none!important;filter:none!important}
+}
