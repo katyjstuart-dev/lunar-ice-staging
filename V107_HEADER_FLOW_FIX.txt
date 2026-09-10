@@ -1,0 +1,12 @@
+LUNAR ICE V107 — HEADER FLOW FIX
+
+Root cause corrected:
+- V106 made the fixed header 190px tall but the page was still only reserving 96px above the hero.
+- That left 94px of the header physically covering the hero and cutting through the headline.
+
+Fix:
+- desktop / iPad landscape body offset now matches the 190px fixed header exactly;
+- medium tablet body offset now matches its 132px header;
+- hero copy is moved slightly lower within the unobstructed hero so it sits more centrally between the header and the four feature boxes;
+- all V106 visual styling and the corrected icon boxes are retained;
+- CSS cache bumped to v107.

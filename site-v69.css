@@ -2345,3 +2345,52 @@ body{padding-top:96px}
     padding-top:42px!important;
   }
 }
+
+/* =========================================================
+   V107 — HEADER FLOW FIX
+   Corrects the real cause of the V106 overlap:
+   the header was increased to 190px but body padding was still 96px.
+   ========================================================= */
+
+/* Desktop / iPad landscape */
+@media (min-width:1181px){
+  body{
+    padding-top:190px!important;
+  }
+
+  .top{
+    position:fixed!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    z-index:1000!important;
+  }
+
+  /* Put the hero copy slightly lower within the now-correct visible hero area. */
+  .heroCopy{
+    justify-content:center!important;
+    padding-top:92px!important;
+    padding-bottom:18px!important;
+  }
+}
+
+/* iPad portrait / medium tablet */
+@media (min-width:761px) and (max-width:1180px){
+  body{
+    padding-top:132px!important;
+  }
+
+  .top{
+    position:fixed!important;
+    top:0!important;
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    z-index:1000!important;
+  }
+
+  .heroCopy{
+    padding-top:56px!important;
+  }
+}
