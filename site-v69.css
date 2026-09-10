@@ -2462,3 +2462,37 @@ body{padding-top:96px}
     max-width:640px!important;
   }
 }
+
+/* =========================================================
+   V110 — REVIEWS ABOVE FEATURE BOXES
+   Homepage only: review strip now sits directly below hero.
+   ========================================================= */
+@media (min-width:1181px){
+  .home-review-strip{
+    min-height:88px!important;
+  }
+
+  .home-review-inner{
+    min-height:88px!important;
+    padding-top:14px!important;
+    padding-bottom:14px!important;
+    display:grid!important;
+    grid-template-columns:130px minmax(0,1fr) auto!important;
+    align-items:center!important;
+    column-gap:28px!important;
+  }
+
+  .home-review-label{
+    margin:0!important;
+  }
+
+  .home-review-rotator{
+    min-height:28px!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+
+  .home-review{
+    margin:0!important;
+  }
+}

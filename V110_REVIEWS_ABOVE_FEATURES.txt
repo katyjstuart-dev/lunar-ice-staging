@@ -1,0 +1,16 @@
+LUNAR ICE V110 — REVIEWS ABOVE FEATURE BOXES
+
+Homepage-only layout change:
+- existing Google review carousel moved directly below the hero;
+- four icon feature boxes now sit immediately below the review carousel;
+- review strip compacted slightly so it works as part of the first landing view.
+
+Not changed:
+- header
+- logo
+- navigation
+- hero copy
+- hero image
+- four feature box content/design
+- any other page
+- SEO/form/URL files
