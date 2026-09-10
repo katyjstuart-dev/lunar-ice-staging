@@ -1,0 +1,15 @@
+LUNAR ICE V111 — WEDDINGS & EVENTS COPY BALANCE
+
+Changed only weddings-events.html:
+- broadened hero from celebration/wedding-led messaging to weddings, festivals, trade shows, corporate events, private parties and outdoor events;
+- added proper festival and large-event capability section covering bars/traders/top-ups, controlled access and multiple vehicles;
+- broadened venue/event-site experience;
+- broadened final ice-use section to cover weddings and high-volume events;
+- retained What3Words in page copy;
+- retained link to dedicated Festivals & Large Events page.
+
+Homepage landing area is byte-for-byte unchanged from V110.
+
+Form verified:
+- destination: info@lunarice.co.uk
+- subject: Website Enquiry
