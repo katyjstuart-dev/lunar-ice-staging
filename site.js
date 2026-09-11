@@ -2,6 +2,18 @@
 (() => {
   const menu = document.querySelector('.menuBtn');
   const nav = document.querySelector('.nav');
+  const navHome = nav?.parentNode;
+  const navNext = nav?.nextSibling;
+  if (nav) {
+    nav.id = nav.id || 'mobile-navigation';
+    nav.classList.add('mobile-nav-panel');
+  }
+  if (menu && nav) menu.setAttribute('aria-controls', nav.id);
+  const placeNav = () => {
+    if (!nav || !navHome) return;
+    if (window.innerWidth <= 900 && nav.parentNode !== document.body) document.body.appendChild(nav);
+    if (window.innerWidth > 900 && nav.parentNode === document.body) navHome.insertBefore(nav, navNext);
+  };
   const groups = [...document.querySelectorAll('.navgroup')];
   const closeGroups = (except) => groups.forEach(group => {
     if (group === except) return;
@@ -18,6 +30,7 @@
   };
   if (menu && nav) {
     menu.addEventListener('click', () => {
+      placeNav();
       const open = nav.classList.toggle('open');
       menu.setAttribute('aria-expanded', String(open));
       document.body.classList.toggle('mobile-nav-open', open);
@@ -40,7 +53,11 @@
   document.addEventListener('click', e => {
     if (window.innerWidth <= 900 && nav?.classList.contains('open') && !e.target.closest('.top')) closeMenu();
   });
-  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
+  placeNav();
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMenu();
+    placeNav();
+  });
 })();
 
 document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventListener('error',function(){this.style.display='none';var f=this.parentElement.querySelector('.logo-fallback');if(f)f.style.display='block';});});
