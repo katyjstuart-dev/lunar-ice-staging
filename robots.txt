@@ -1,4 +1,21 @@
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /send-enquiry.php
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /send-enquiry.php
+
+User-agent: Bingbot
+Allow: /
+Disallow: /send-enquiry.php
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /send-enquiry.php
+
 User-agent: *
 Allow: /
+Disallow: /send-enquiry.php
 
 Sitemap: https://www.lunarice.co.uk/sitemap.xml
