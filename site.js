@@ -2,20 +2,45 @@
 (() => {
   const menu = document.querySelector('.menuBtn');
   const nav = document.querySelector('.nav');
+  const groups = [...document.querySelectorAll('.navgroup')];
+  const closeGroups = (except) => groups.forEach(group => {
+    if (group === except) return;
+    group.classList.remove('open');
+    const button = group.querySelector('.navdrop');
+    if (button) button.setAttribute('aria-expanded', 'false');
+  });
+  const closeMenu = () => {
+    if (!menu || !nav) return;
+    nav.classList.remove('open');
+    menu.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('mobile-nav-open');
+    closeGroups();
+  };
   if (menu && nav) {
     menu.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       menu.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('mobile-nav-open', open);
+      if (!open) closeGroups();
     });
   }
-  document.querySelectorAll('.navdrop').forEach(btn => {
+  groups.forEach(group => {
+    const btn = group.querySelector('.navdrop');
+    if (!btn) return;
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const group = btn.closest('.navgroup');
+      e.stopPropagation();
+      closeGroups(group);
       const open = group.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
     });
   });
+  if (nav) nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+  document.addEventListener('click', e => {
+    if (window.innerWidth <= 900 && nav?.classList.contains('open') && !e.target.closest('.top')) closeMenu();
+  });
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
 })();
 
 document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventListener('error',function(){this.style.display='none';var f=this.parentElement.querySelector('.logo-fallback');if(f)f.style.display='block';});});
