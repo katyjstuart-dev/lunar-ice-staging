@@ -4959,29 +4959,29 @@ body.wedding-page-v168 .section h2{
 
 /* V174 — WEDDING HERO: shorter, centred and never clipped. */
 body.wedding-page-v174 .subhero{
-  min-height:500px!important;
+  min-height:460px!important;
   height:auto!important;
 }
 body.wedding-page-v174 .subheroCopy{
-  min-height:500px!important;
+  min-height:460px!important;
   box-sizing:border-box!important;
   padding-top:48px!important;
   padding-bottom:48px!important;
 }
 body.wedding-page-v174 .subhero h1{
-  max-width:12ch!important;
-  font-size:clamp(38px,3.8vw,54px)!important;
+  max-width:16ch!important;
+  font-size:clamp(36px,3.5vw,50px)!important;
   line-height:.98!important;
 }
 body.wedding-page-v174 .subheroMedia{
-  min-height:500px!important;
-  height:500px!important;
+  min-height:460px!important;
+  height:460px!important;
   overflow:hidden!important;
 }
 body.wedding-page-v174 .subheroMedia img{
   width:100%!important;
-  height:500px!important;
-  min-height:500px!important;
+  height:460px!important;
+  min-height:460px!important;
   max-height:none!important;
   aspect-ratio:auto!important;
   object-fit:cover!important;
