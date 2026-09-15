@@ -136,8 +136,9 @@
 <p>We'd rather be accused of over-communicating than leave you wondering what is happening with an important delivery.</p>
 </div>
 </div>
-<form action="send-enquiry.php" class="contactform" method="post">
+<form action="send-enquiry.php" accept-charset="UTF-8" class="contactform" method="post">
 <input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+<p class="form-note" id="enquiry-status" role="status" hidden=""></p>
 <div class="form-intro">
 <div class="eyebrow">ENQUIRY FORM</div>
 <h3>SEND US YOUR ENQUIRY.</h3>
@@ -179,8 +180,8 @@
 </div>
 <div class="form-row">
 <div class="field">
-<label for="ice_type">Type of Ice</label>
-<select id="ice_type" name="ice_type">
+<label for="ice_type">Type of Ice *</label>
+<select id="ice_type" name="ice_type" required="">
 <option disabled selected value="">Please choose one</option>
 <option>Cubed</option>
 <option>Crushed</option>
@@ -282,5 +283,6 @@
 </div>
 <script src="site.js?v=162">
 </script>
+<script>(()=>{const s=document.querySelector('#enquiry-status');if(!s||new URLSearchParams(location.search).get('sent')!=='1')return;s.textContent='Thank you — your enquiry has been sent to Lunar Ice. We’ll be in touch shortly.';s.hidden=false;if(history.replaceState)history.replaceState({},document.title,location.pathname+location.hash)})();</script>
 </body>
 </html>

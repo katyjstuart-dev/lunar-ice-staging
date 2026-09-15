@@ -1,6 +1,12 @@
 <?php
+const ENQUIRY_TO = 'info@lunarice.co.uk';
+const ENQUIRY_FROM = 'info@lunarice.co.uk';
+const MAX_ENQUIRY_BYTES = 25000;
+
 header('Cache-Control: no-store');
 header('X-Robots-Tag: noindex, nofollow', true);
+header('X-Content-Type-Options: nosniff');
+header('Content-Type: text/plain; charset=UTF-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: POST');
@@ -8,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit('Method not allowed');
 }
 
-if ((int)($_SERVER['CONTENT_LENGTH'] ?? 0) > 25000) {
+if ((int)($_SERVER['CONTENT_LENGTH'] ?? 0) > MAX_ENQUIRY_BYTES) {
     http_response_code(413);
     exit('Enquiry too large');
 }
@@ -44,12 +50,17 @@ $quantity = clean_line($_POST['quantity'] ?? '', 80);
 $heard = clean_line($_POST['heard'] ?? '', 160);
 $message = clean_message($_POST['message'] ?? '');
 
-$allowed_ice_types = ['', 'Cubed', 'Crushed'];
-$valid_date = preg_match('/^\d{4}-\d{2}-\d{2}$/', $delivery_date) === 1;
+$allowed_ice_types = ['Cubed', 'Crushed'];
+$allowed_purposes = ['Ice for Chilling', 'Ice for Drinking', 'Ice for Chilling and Drinking', 'Other'];
+$date_parts = explode('-', $delivery_date);
+$valid_date = count($date_parts) === 3
+    && preg_match('/^\d{4}-\d{2}-\d{2}$/', $delivery_date) === 1
+    && checkdate((int)$date_parts[1], (int)$date_parts[2], (int)$date_parts[0]);
 
 if (!$name || !$telephone || !$email || !$repeat || strtolower($email) !== strtolower($repeat)
     || !$valid_date || !$delivery_time || !$postcode || !$purpose || !$quantity || !$heard || !$message
-    || !in_array($ice_type, $allowed_ice_types, true)) {
+    || !in_array($ice_type, $allowed_ice_types, true)
+    || !in_array($purpose, $allowed_purposes, true)) {
     http_response_code(400);
     exit('Please check the required fields and make sure both email addresses match.');
 }
@@ -73,18 +84,28 @@ foreach ($fields as $label => $value) {
     $body .= $label . ': ' . $value . "\n";
 }
 
+$subject = 'New Lunar Ice website enquiry - ' . $delivery_date . ' - ' . $postcode;
 $headers = [
-    'From: Lunar Ice Website <info@lunarice.co.uk>',
+    'From: Lunar Ice Website <' . ENQUIRY_FROM . '>',
     'Reply-To: ' . $email,
+    'MIME-Version: 1.0',
     'Content-Type: text/plain; charset=UTF-8',
+    'Content-Transfer-Encoding: 8bit',
 ];
 
-$sent = mail('info@lunarice.co.uk', 'Website Enquiry', $body, implode("\r\n", $headers));
+$sent = mail(
+    ENQUIRY_TO,
+    $subject,
+    wordwrap($body, 78),
+    implode("\r\n", $headers),
+    '-f' . ENQUIRY_FROM
+);
 if ($sent) {
     header('Location: /contact.html?sent=1', true, 303);
     exit;
 }
 
+error_log('Lunar Ice website enquiry could not be handed to the mail server.');
 http_response_code(500);
 echo 'Your enquiry could not be sent. Please call or WhatsApp Lunar Ice on 07907 783121.';
 ?>
