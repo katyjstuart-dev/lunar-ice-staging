@@ -2854,6 +2854,12 @@ body{padding-top:96px}
   object-position:center!important;
   background:#0D174D!important;
 }
+
+/* V163 — keep the replacement 6 × 2kg product photos focused on the bag branding. */
+.subheroMedia img.product-2kg-hero-image,
+.productimage-v51 img.product-2kg-card-image{
+  object-position:center 30%!important;
+}
 @media(max-width:960px){
   .subheroMedia.product-range-media-v122 .product-range-hero-v120{
     height:auto!important;
@@ -4505,5 +4511,205 @@ body{padding-top:96px}
     object-position:50% 18%!important;
     margin:0!important;
     border-radius:0!important;
+  }
+}
+
+
+/* =========================================================
+   V164 — FESTIVALS & LARGE EVENTS
+   Structured proof, real-event imagery and operational detail
+   without isolated cards or empty gallery space.
+   ========================================================= */
+.festival-intro-v164 .split{
+  align-items:end;
+}
+.festival-proof-v164{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  margin-top:48px;
+  border-top:1px solid rgba(13,23,77,.18);
+  border-bottom:1px solid rgba(13,23,77,.18);
+}
+.festival-proof-v164>div{
+  min-width:0;
+  padding:24px 22px 26px;
+  border-left:1px solid rgba(13,23,77,.18);
+}
+.festival-proof-v164>div:first-child{
+  border-left:0;
+}
+.festival-proof-v164 strong,
+.festival-proof-v164 span{
+  display:block;
+}
+.festival-proof-v164 strong{
+  color:var(--navy);
+  font-family:'Audiowide',Arial,sans-serif;
+  font-size:13px;
+  line-height:1.3;
+  letter-spacing:.06em;
+}
+.festival-proof-v164 span{
+  margin-top:9px;
+  color:#5c657d;
+  font-size:14px;
+  line-height:1.48;
+}
+.festival-work-v164 .eyebrow{
+  color:var(--green);
+}
+.festival-work-v164 h2{
+  max-width:980px;
+}
+.festival-gallery-v164{
+  display:grid;
+  grid-template-columns:minmax(0,7fr) minmax(0,5fr);
+  grid-template-rows:repeat(2,minmax(238px,1fr));
+  gap:12px;
+  margin-top:38px;
+}
+.festival-gallery-v164 figure{
+  position:relative;
+  min-width:0;
+  min-height:238px;
+  margin:0;
+  overflow:hidden;
+  background:#071038;
+}
+.festival-gallery-v164 figure:first-child{
+  grid-row:1 / 3;
+  min-height:488px;
+}
+.festival-gallery-v164 img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:238px;
+  object-fit:cover;
+  transition:transform .45s ease;
+}
+.festival-gallery-v164 figure:first-child img{
+  min-height:488px;
+}
+.festival-gallery-v164 figure:hover img{
+  transform:scale(1.02);
+}
+.festival-gallery-v164 figcaption{
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding:12px 15px 11px;
+  border-top:2px solid var(--green);
+  background:rgba(13,23,77,.94);
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  line-height:1.25;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.festival-logistics-v164 .split{
+  align-items:start;
+}
+.festival-ops-v164{
+  margin-top:28px;
+  border-top:1px solid rgba(13,23,77,.2);
+}
+.festival-ops-v164>div{
+  display:grid;
+  grid-template-columns:54px minmax(0,1fr);
+  gap:18px;
+  align-items:start;
+  padding:18px 0;
+  border-bottom:1px solid rgba(13,23,77,.2);
+}
+.festival-ops-v164 span{
+  color:var(--green);
+  font-family:'Audiowide',Arial,sans-serif;
+  font-size:16px;
+  line-height:1.4;
+}
+.festival-ops-v164 p{
+  margin:0;
+  color:#59627a;
+  font-size:16px;
+  line-height:1.55;
+}
+.festival-ops-v164 strong{
+  display:block;
+  margin-bottom:3px;
+  color:var(--navy);
+  font-size:17px;
+}
+@media(max-width:900px){
+  .festival-proof-v164{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .festival-proof-v164>div:nth-child(3){
+    border-left:0;
+    border-top:1px solid rgba(13,23,77,.18);
+  }
+  .festival-proof-v164>div:nth-child(4){
+    border-top:1px solid rgba(13,23,77,.18);
+  }
+  .festival-gallery-v164{
+    grid-template-rows:repeat(2,minmax(204px,1fr));
+  }
+  .festival-gallery-v164 figure:first-child,
+  .festival-gallery-v164 figure:first-child img{
+    min-height:420px;
+  }
+}
+@media(max-width:620px){
+  .festival-proof-v164{
+    margin-top:28px;
+  }
+  .festival-proof-v164>div{
+    padding:17px 14px 19px;
+  }
+  .festival-proof-v164 strong{
+    font-size:11px;
+  }
+  .festival-proof-v164 span{
+    font-size:12.5px;
+  }
+  .festival-gallery-v164{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:auto;
+    gap:7px;
+    margin-top:24px;
+  }
+  .festival-gallery-v164 figure,
+  .festival-gallery-v164 figure img{
+    min-height:170px;
+    height:170px;
+  }
+  .festival-gallery-v164 figure:first-child{
+    grid-column:1 / -1;
+    grid-row:auto;
+  }
+  .festival-gallery-v164 figure:first-child,
+  .festival-gallery-v164 figure:first-child img{
+    min-height:280px;
+    height:280px;
+  }
+  .festival-gallery-v164 figcaption{
+    padding:9px 10px 8px;
+    font-size:9.5px;
+  }
+  .festival-ops-v164{
+    margin-top:20px;
+  }
+  .festival-ops-v164>div{
+    grid-template-columns:38px minmax(0,1fr);
+    gap:10px;
+    padding:14px 0;
+  }
+  .festival-ops-v164 span{
+    font-size:13px;
+  }
+  .festival-ops-v164 p,
+  .festival-ops-v164 strong{
+    font-size:13.5px;
   }
 }
