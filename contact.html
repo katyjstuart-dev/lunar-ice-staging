@@ -7,7 +7,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Contact Lunar Ice | Ice Delivery Enquiry</title>
 <meta content="Contact Lunar Ice for cubed and crushed ice delivery. Send the date, postcode, ice type and approximate quantity for a practical quote." name="description">
-<link href="site-v162.css?v=177" rel="stylesheet">
+<link href="site-v162.css?v=181" rel="stylesheet">
 <!-- V70 ADDITIVE SEO SUPPORT START -->
 <link rel="canonical" href="https://www.lunarice.co.uk/contact.html">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -105,7 +105,7 @@
 <div class="contact-landing-copy-v135">
 <div class="eyebrow">CONTACT / ENQUIRY</div>
 <h1>NEED ICE?<br>LET'S SORT IT.</h1>
-<p>Complete the enquiry form and we’ll come back to you quickly. If it’s urgent, call or WhatsApp us.</p>
+<p>Fill in what you know — a best guess is absolutely fine. We’ll ask the useful questions, help with the quantity and come back to you quickly. If it’s urgent, call or WhatsApp us.</p>
 </div>
 <div class="contact-landing-actions-v135" aria-label="Quick contact options">
 <a aria-label="Call Lunar Ice on 07907 783121" class="contact-call" href="tel:07907783121">
@@ -143,7 +143,7 @@
 <div class="form-intro">
 <div class="eyebrow">ENQUIRY FORM</div>
 <h3>SEND US YOUR ENQUIRY.</h3>
-<p>Fill in what you know. If you are unsure about the quantity, have a sensible guess and we can sense-check it with you.</p>
+<p>Fill in what you know. No ice expertise required and no need to pretend you know the quantity — give us your best guess and we’ll sense-check it with you.</p>
 </div>
 <div class="form-row">
 <div class="field">
@@ -181,13 +181,13 @@
 </div>
 <div class="form-row">
 <div class="field">
-<label for="ice_type">Type of Ice *</label>
-<select id="ice_type" name="ice_type" required="">
-<option disabled selected value="">Please choose one</option>
-<option>Cubed</option>
-<option>Crushed</option>
-<option value="Cubed and Crushed">Cubed and crushed</option>
-</select>
+<fieldset class="ice-options" id="ice_type" aria-describedby="ice-type-error" aria-required="true">
+<legend>Type of Ice *</legend>
+<label><input name="ice_type[]" type="checkbox" value="12kg Cubed"> <span>12kg Cubed</span></label>
+<label><input name="ice_type[]" type="checkbox" value="12kg Crushed"> <span>12kg Crushed</span></label>
+<label><input name="ice_type[]" type="checkbox" value="6 × 2kg Cubed Packs"> <span>6 × 2kg Cubed Packs</span></label>
+<span class="ice-type-error" id="ice-type-error" aria-live="polite"></span>
+</fieldset>
 </div>
 <div class="field">
 <label for="purpose">Purpose of ice *</label>
@@ -284,7 +284,7 @@
 <a href="tel:07907783121">CALL</a>
 <a href="contact.html" aria-current="page">QUOTE</a>
 </div>
-<script src="site.js?v=177">
+<script src="site.js?v=181">
 </script>
 </body>
 </html>

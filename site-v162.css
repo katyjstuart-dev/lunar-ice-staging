@@ -1903,6 +1903,61 @@ body{padding-top:0!important}
     margin-bottom:0!important;
   }
 }
+
+/* V179 — enquiry form ice choices: allow customers to select one or several. */
+.contactform .ice-options{
+  min-width:0!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+.contactform .ice-options legend{
+  display:block!important;
+  width:100%!important;
+  min-height:44px!important;
+  margin:0 0 8px!important;
+  padding:0!important;
+  color:#0D174D!important;
+  font-size:15px!important;
+  font-weight:800!important;
+  line-height:1.25!important;
+}
+.contactform .ice-options label{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  min-height:0!important;
+  margin:0 0 8px!important;
+  padding:10px 12px!important;
+  border:1px solid rgba(13,23,77,.18)!important;
+  border-radius:8px!important;
+  background:#fff!important;
+  color:#0D174D!important;
+  cursor:pointer!important;
+}
+.contactform .ice-options input[type="checkbox"]{
+  -webkit-appearance:auto!important;
+  appearance:auto!important;
+  flex:0 0 20px!important;
+  width:20px!important;
+  height:20px!important;
+  min-height:20px!important;
+  max-height:20px!important;
+  margin:0!important;
+  padding:0!important;
+  accent-color:#0D174D!important;
+}
+.contactform .ice-options label:has(input:checked){
+  border-color:#8F9D57!important;
+  background:#F6F8ED!important;
+}
+.contactform .ice-type-error{
+  display:block!important;
+  min-height:18px!important;
+  color:#9B1C1C!important;
+  font-size:13px!important;
+  line-height:1.35!important;
+}
 @media(max-width:420px){
   .heroCopy{
     padding-top:28px!important;
@@ -5007,5 +5062,77 @@ body.wedding-page-v174 .subheroMedia img{
   body.wedding-page-v174 .subheroMedia img{
     height:280px!important;
     min-height:280px!important;
+  }
+}
+
+/* =========================================================
+   V178 — COMPLETE TABLET-LANDSCAPE LANDINGS
+   Safari on iPad leaves less usable height beneath its browser
+   chrome. Size these two approved landings to the visible space
+   below the fixed header so neither the next section nor the
+   bottom of the festival photo grid is left half-cut.
+   ========================================================= */
+@media (min-width:901px) and (max-width:1180px){
+  body.wedding-page-v174 .subhero,
+  body.festival-page-v165 .subhero{
+    height:calc(100svh - 132px)!important;
+    min-height:500px!important;
+    max-height:680px!important;
+  }
+
+  body.wedding-page-v174 .subheroCopy,
+  body.festival-page-v165 .subheroCopy,
+  body.wedding-page-v174 .subheroMedia,
+  body.festival-page-v165 .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+
+  body.wedding-page-v174 .subheroCopy,
+  body.festival-page-v165 .subheroCopy{
+    padding-top:38px!important;
+    padding-bottom:38px!important;
+  }
+
+  body.wedding-page-v174 .subheroMedia img,
+  body.festival-page-v165 .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+}
+
+/* iPad Pro landscape exposes a desktop-width viewport. */
+@media (min-width:1181px) and (max-width:1366px) and (hover:none) and (pointer:coarse){
+  body.wedding-page-v174 .subhero,
+  body.festival-page-v165 .subhero{
+    height:calc(100svh - 160px)!important;
+    min-height:520px!important;
+    max-height:720px!important;
+  }
+
+  body.wedding-page-v174 .subheroCopy,
+  body.festival-page-v165 .subheroCopy,
+  body.wedding-page-v174 .subheroMedia,
+  body.festival-page-v165 .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+
+  body.wedding-page-v174 .subheroCopy,
+  body.festival-page-v165 .subheroCopy{
+    padding-top:42px!important;
+    padding-bottom:42px!important;
+  }
+
+  body.wedding-page-v174 .subheroMedia img,
+  body.festival-page-v165 .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
   }
 }

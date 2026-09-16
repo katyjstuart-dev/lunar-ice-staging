@@ -149,6 +149,17 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
   email?.addEventListener('input', checkEmails);
   repeat?.addEventListener('input', checkEmails);
 
+  const iceTypes = [...form.querySelectorAll('input[name="ice_type[]"]')];
+  const iceTypeError = form.querySelector('#ice-type-error');
+  const checkIceTypes = () => {
+    if (!iceTypes.length) return true;
+    const valid = iceTypes.some((input) => input.checked);
+    iceTypes[0].setCustomValidity(valid ? '' : 'Please choose at least one type of ice.');
+    if (iceTypeError) iceTypeError.textContent = valid ? '' : 'Please choose at least one option.';
+    return valid;
+  };
+  iceTypes.forEach((input) => input.addEventListener('change', checkIceTypes));
+
   const status = document.querySelector('#enquiry-status');
   const result = new URLSearchParams(window.location.search).get('sent');
   if (status && result === '1') {
@@ -162,7 +173,13 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
     window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
   }
 
-  form.addEventListener('submit', () => {
+  form.addEventListener('submit', (event) => {
+    if (!checkIceTypes()) {
+      event.preventDefault();
+      iceTypes[0]?.focus();
+      form.reportValidity();
+      return;
+    }
     const button = form.querySelector('.form-submit');
     if (!button) return;
     button.disabled = true;
