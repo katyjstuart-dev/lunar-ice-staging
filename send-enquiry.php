@@ -8,6 +8,13 @@ header('X-Robots-Tag: noindex, nofollow', true);
 header('X-Content-Type-Options: nosniff');
 header('Content-Type: text/plain; charset=UTF-8');
 
+$allowed_origins = ['https://www.lunarice.co.uk', 'https://lunarice.co.uk'];
+$request_origin = strtolower(rtrim((string)($_SERVER['HTTP_ORIGIN'] ?? ''), '/'));
+if ($request_origin !== '' && !in_array($request_origin, $allowed_origins, true)) {
+    http_response_code(403);
+    exit('Request not accepted');
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Allow: POST');
     http_response_code(405);
@@ -50,7 +57,7 @@ $quantity = clean_line($_POST['quantity'] ?? '', 80);
 $heard = clean_line($_POST['heard'] ?? '', 160);
 $message = clean_message($_POST['message'] ?? '');
 
-$allowed_ice_types = ['Cubed', 'Crushed'];
+$allowed_ice_types = ['Cubed', 'Crushed', 'Cubed and Crushed'];
 $allowed_purposes = ['Ice for Chilling', 'Ice for Drinking', 'Ice for Chilling and Drinking', 'Other'];
 $date_parts = explode('-', $delivery_date);
 $valid_date = count($date_parts) === 3
@@ -93,7 +100,7 @@ $headers = [
     'Content-Transfer-Encoding: 8bit',
 ];
 
-$sent = mail(
+$sent = @mail(
     ENQUIRY_TO,
     $subject,
     wordwrap($body, 78),
@@ -106,6 +113,6 @@ if ($sent) {
 }
 
 error_log('Lunar Ice website enquiry could not be handed to the mail server.');
-http_response_code(500);
-echo 'Your enquiry could not be sent. Please call or WhatsApp Lunar Ice on 07907 783121.';
+header('Location: /contact.html?sent=0', true, 303);
+exit;
 ?>

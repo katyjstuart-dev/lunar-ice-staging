@@ -124,3 +124,48 @@ document.querySelectorAll('.real-logo img').forEach(function(img){img.addEventLi
   window.addEventListener('pageshow', resetTop, {once:true});
   requestAnimationFrame(resetTop);
 })();
+
+// Contact form: prevent past-date mistakes, catch email typos and give a clear result.
+(() => {
+  const form = document.querySelector('.contactform');
+  if (!form) return;
+
+  const date = form.querySelector('#delivery_date');
+  if (date && !date.min) {
+    const now = new Date();
+    const localToday = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+      .toISOString().slice(0, 10);
+    date.min = localToday;
+  }
+
+  const email = form.querySelector('#email');
+  const repeat = form.querySelector('#repeat_email');
+  const checkEmails = () => {
+    if (!repeat) return;
+    repeat.setCustomValidity(email && repeat.value && email.value.toLowerCase() !== repeat.value.toLowerCase()
+      ? 'Please make sure both email addresses match.'
+      : '');
+  };
+  email?.addEventListener('input', checkEmails);
+  repeat?.addEventListener('input', checkEmails);
+
+  const status = document.querySelector('#enquiry-status');
+  const result = new URLSearchParams(window.location.search).get('sent');
+  if (status && result === '1') {
+    status.textContent = 'Thank you — your enquiry has been sent to Lunar Ice. We’ll be in touch shortly.';
+    status.hidden = false;
+  } else if (status && result === '0') {
+    status.textContent = 'That did not send. Please call or WhatsApp us on 07907 783121 and we’ll help.';
+    status.hidden = false;
+  }
+  if (result !== null && window.history.replaceState) {
+    window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+  }
+
+  form.addEventListener('submit', () => {
+    const button = form.querySelector('.form-submit');
+    if (!button) return;
+    button.disabled = true;
+    button.textContent = 'SENDING…';
+  });
+})();

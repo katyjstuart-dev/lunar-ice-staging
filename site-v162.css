@@ -2,6 +2,10 @@
 /* V14 brand, WhatsApp recognition & readability */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+.hp-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.form-privacy a{text-decoration:underline;font-weight:700}
+#privacy{scroll-margin-top:120px}
+
 .brand.brandtype{
   display:flex; align-items:center; gap:0; text-decoration:none; min-width:max-content;
 }

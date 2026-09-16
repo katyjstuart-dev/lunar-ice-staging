@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport">
 <meta content="#0D174D" name="theme-color">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Contact Lunar Ice | Ice Delivery Enquiry</title>
 <meta content="Contact Lunar Ice for cubed and crushed ice delivery. Send the date, postcode, ice type and approximate quantity for a practical quote." name="description">
-<link href="site-v162.css?v=175" rel="stylesheet">
+<link href="site-v162.css?v=177" rel="stylesheet">
 <!-- V70 ADDITIVE SEO SUPPORT START -->
 <link rel="canonical" href="https://www.lunarice.co.uk/contact.html">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -137,7 +138,7 @@
 </div>
 </div>
 <form action="send-enquiry.php" accept-charset="UTF-8" class="contactform" method="post">
-<input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+<input aria-hidden="true" autocomplete="off" class="hp-field" name="website" tabindex="-1" type="text">
 <p class="form-note" id="enquiry-status" role="status" hidden=""></p>
 <div class="form-intro">
 <div class="eyebrow">ENQUIRY FORM</div>
@@ -147,21 +148,21 @@
 <div class="form-row">
 <div class="field">
 <label for="name">Name *</label>
-<input autocomplete="name" id="name" name="name" required="">
+<input autocomplete="name" id="name" maxlength="100" name="name" required="">
 </div>
 <div class="field">
 <label for="telephone">Mobile Number *</label>
-<input autocomplete="tel" id="telephone" name="telephone" required="" type="tel">
+<input autocomplete="tel" id="telephone" inputmode="tel" maxlength="40" name="telephone" required="" type="tel">
 </div>
 </div>
 <div class="form-row">
 <div class="field">
 <label for="email">E-mail *</label>
-<input autocomplete="email" id="email" name="email" required="" type="email">
+<input autocomplete="email" id="email" maxlength="254" name="email" required="" type="email">
 </div>
 <div class="field">
 <label for="repeat_email">Repeat E-mail *</label>
-<input autocomplete="email" id="repeat_email" name="repeat_email" required="" type="email">
+<input autocomplete="email" id="repeat_email" maxlength="254" name="repeat_email" required="" type="email">
 </div>
 </div>
 <div class="form-row delivery-details-row">
@@ -171,11 +172,11 @@
 </div>
 <div class="field">
 <label for="delivery_time">Preferred two-hourly delivery slot window *</label>
-<input id="delivery_time" name="delivery_time" placeholder="e.g. 10am–12pm" required="">
+<input id="delivery_time" maxlength="80" name="delivery_time" placeholder="e.g. 10am–12pm" required="">
 </div>
 <div class="field postcode-field">
 <label for="postcode">Postcode of Delivery *</label>
-<input autocomplete="postal-code" id="postcode" name="postcode" required="" maxlength="8">
+<input autocomplete="postal-code" id="postcode" inputmode="text" name="postcode" required="" maxlength="8">
 </div>
 </div>
 <div class="form-row">
@@ -185,6 +186,7 @@
 <option disabled selected value="">Please choose one</option>
 <option>Cubed</option>
 <option>Crushed</option>
+<option value="Cubed and Crushed">Cubed and crushed</option>
 </select>
 </div>
 <div class="field">
@@ -201,19 +203,20 @@
 <div class="form-row">
 <div class="field">
 <label for="quantity">How many bags? *</label>
-<input id="quantity" name="quantity" placeholder="Have a go — we can help from there" required="">
+<input id="quantity" maxlength="80" name="quantity" placeholder="Have a go — we can help from there" required="">
 </div>
 <div class="field">
 <label for="heard">Where did you hear about us? *</label>
-<input id="heard" name="heard" required="">
+<input id="heard" maxlength="160" name="heard" required="">
 </div>
 </div>
 <div class="field full">
 <label for="message">Message / additional delivery information *</label>
-<textarea id="message" name="message" placeholder="Venue or site name, access notes, what you are chilling, event details — anything that helps us understand the job." required="">
+<textarea id="message" maxlength="3000" name="message" placeholder="Venue or site name, access notes, what you are chilling, event details — anything that helps us understand the job." required="">
 </textarea>
 </div>
 <button class="btn form-submit" type="submit">SEND WEBSITE ENQUIRY</button>
+<p class="form-note form-privacy">We use these details to reply and deal with your enquiry. <a href="terms.html#privacy">Read our privacy information.</a></p>
 <p class="form-note">Minimum delivery quantities vary by area. Please check your spam/junk folder if you are waiting for a reply.</p>
 </form>
 </div>
@@ -267,7 +270,7 @@
 </div>
 <div class="wrap v82-legal">
 <span>© 2026 Lunar Ice. All rights reserved.</span>
-<a href="terms.html">Terms &amp; Delivery Information</a>
+<a href="terms.html">Terms, Privacy &amp; Delivery Information</a>
 </div>
 </footer>
 <div class="stickycontact">
@@ -281,8 +284,7 @@
 <a href="tel:07907783121">CALL</a>
 <a href="contact.html" aria-current="page">QUOTE</a>
 </div>
-<script src="site.js?v=162">
+<script src="site.js?v=177">
 </script>
-<script>(()=>{const s=document.querySelector('#enquiry-status');if(!s||new URLSearchParams(location.search).get('sent')!=='1')return;s.textContent='Thank you — your enquiry has been sent to Lunar Ice. We’ll be in touch shortly.';s.hidden=false;if(history.replaceState)history.replaceState({},document.title,location.pathname+location.hash)})();</script>
 </body>
 </html>
