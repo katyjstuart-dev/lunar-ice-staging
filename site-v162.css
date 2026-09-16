@@ -1768,6 +1768,91 @@ h1,h2,h3,h4{overflow-wrap:normal!important;word-break:normal!important;hyphens:n
   }
 }
 
+/* =========================================================
+   V185 — CENTRED ABOUT + FAQ LANDINGS
+   Match the compact, complete first-screen treatment used on
+   the other approved internal pages. Keep the copy centred and
+   the full hero within the usable tablet/desktop viewport.
+   ========================================================= */
+@media (min-width:961px) and (max-width:1180px){
+  body.about-page-v183 .about-hero-v183,
+  body.faq-page-v185 .subhero{
+    height:clamp(500px,calc(100svh - 132px),620px)!important;
+    min-height:500px!important;
+    max-height:620px!important;
+  }
+  body.about-page-v183 .about-hero-v183 .subheroCopy,
+  body.about-page-v183 .about-hero-v183 .subheroMedia,
+  body.faq-page-v185 .subheroCopy,
+  body.faq-page-v185 .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+  body.about-page-v183 .about-hero-v183 .subheroCopy,
+  body.faq-page-v185 .subheroCopy{
+    align-items:center!important;
+    padding-top:38px!important;
+    padding-bottom:38px!important;
+  }
+  body.about-page-v183 .about-hero-v183 .subheroMedia img,
+  body.faq-page-v185 .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+  body.about-page-v183 .about-hero-v183 h1,
+  body.faq-page-v185 .subhero h1{
+    font-size:clamp(42px,5.2vw,56px)!important;
+  }
+}
+
+@media (min-width:1181px){
+  body.about-page-v183 .about-hero-v183,
+  body.faq-page-v185 .subhero{
+    height:clamp(520px,calc(100svh - 160px),660px)!important;
+    min-height:520px!important;
+    max-height:660px!important;
+  }
+  body.about-page-v183 .about-hero-v183 .subheroCopy,
+  body.about-page-v183 .about-hero-v183 .subheroMedia,
+  body.faq-page-v185 .subheroCopy,
+  body.faq-page-v185 .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+  body.about-page-v183 .about-hero-v183 .subheroCopy,
+  body.faq-page-v185 .subheroCopy{
+    align-items:center!important;
+    padding-top:42px!important;
+    padding-bottom:42px!important;
+  }
+  body.about-page-v183 .about-hero-v183 .subheroMedia img,
+  body.faq-page-v185 .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+  body.about-page-v183 .about-hero-v183 h1,
+  body.faq-page-v185 .subhero h1{
+    font-size:clamp(46px,4.4vw,62px)!important;
+  }
+}
+
+body.about-page-v183 .about-hero-media-v183 img{
+  object-position:50% 44%!important;
+}
+body.faq-page-v185 .subheroMedia img{
+  object-position:50% 46%!important;
+}
+
 @media (min-width:1181px){
   body.brands-page-v182 .subhero{
     height:clamp(520px,calc(100svh - 160px),680px)!important;
