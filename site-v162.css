@@ -5651,3 +5651,78 @@ body.surrey-page-v187 .subheroMedia .mediaCaption{
     width:100%!important;
   }
 }
+
+/* =========================================================
+   V190 — TRUE DESKTOP LANDING FRAME
+   The tablet treatment above is intentionally left untouched. On desktop,
+   remove the inherited section padding that was shrinking 390px heroes to a
+   262px content row, then give the reviewed landing pages one consistent,
+   properly proportioned title-and-image frame. FAQs keep their approved
+   title-only treatment.
+   ========================================================= */
+@media (min-width:1181px){
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189),
+  body.about-page-v183 .about-hero-v183{
+    height:clamp(480px,calc(100svh - 210px),540px)!important;
+    min-height:480px!important;
+    max-height:540px!important;
+    padding:0!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    overflow:hidden!important;
+  }
+
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroCopy,
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroMedia,
+  body.about-page-v183 .about-hero-v183 .subheroCopy,
+  body.about-page-v183 .about-hero-v183 .subheroMedia{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    box-sizing:border-box!important;
+  }
+
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroCopy,
+  body.about-page-v183 .about-hero-v183 .subheroCopy{
+    display:flex!important;
+    align-items:center!important;
+    padding:48px 0!important;
+  }
+
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroCopy .wrap,
+  body.about-page-v183 .about-hero-v183 .subheroCopy .wrap{
+    width:min(560px,82%)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroCopy .eyebrow,
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroCopy p,
+  body.about-page-v183 .about-hero-v183 .subheroCopy .eyebrow,
+  body.about-page-v183 .about-hero-v183 .subheroCopy p{
+    display:none!important;
+  }
+
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) h1,
+  body.about-page-v183 .about-hero-v183 h1{
+    max-width:15ch!important;
+    margin:0!important;
+    font-size:clamp(48px,4.35vw,64px)!important;
+    line-height:.94!important;
+  }
+
+  body.landing-compact-v187 .subhero:not(.info-hero-v138):not(.faq-title-only-v189) .subheroMedia img,
+  body.about-page-v183 .about-hero-v183 .subheroMedia img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+
+  body.about-page-v183 .about-hero-media-v183 img{
+    object-position:50% 66%!important;
+  }
+}
