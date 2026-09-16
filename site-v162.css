@@ -5347,3 +5347,97 @@ body.about-page-v183 .about54-statement-light-v183 h2{
     max-height:none!important;
   }
 }
+
+/* =========================================================
+   V186 — ONE RELIABLE INTERNAL-PAGE LANDING SYSTEM
+   Final cascade layer: all photographed internal landings share one
+   complete, centred frame. The homepage and text-only pages are separate.
+   ========================================================= */
+@media (min-width:961px){
+  body .subhero:not(.info-hero-v138){
+    height:540px!important;
+    height:clamp(500px,56svh,560px)!important;
+    min-height:500px!important;
+    max-height:560px!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  }
+  body .subhero:not(.info-hero-v138) .subheroCopy,
+  body .subhero:not(.info-hero-v138) .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    box-sizing:border-box!important;
+  }
+  body .subhero:not(.info-hero-v138) .subheroCopy{
+    align-items:center!important;
+    padding:40px 0!important;
+  }
+  body .subhero:not(.info-hero-v138) .subheroCopy .wrap{
+    width:min(590px,84%)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  body .subhero:not(.info-hero-v138) h1{
+    max-width:15ch!important;
+    margin:13px 0 18px!important;
+    font-size:clamp(43px,4.2vw,60px)!important;
+    line-height:.95!important;
+  }
+  body .subhero:not(.info-hero-v138) p{
+    margin-bottom:0!important;
+    font-size:clamp(16px,1.25vw,19px)!important;
+    line-height:1.55!important;
+  }
+  body .subhero:not(.info-hero-v138) .subheroMedia:not(.festival-hero-v165) img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+  }
+  body .subhero .festival-hero-v165{
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+  body.about-page-v183 .about-hero-media-v183 img{object-position:50% 66%!important}
+  body.faq-page-v185 .subheroMedia img{object-position:50% 52%!important}
+  body.delivery-explained-page-v186 .subheroMedia img{object-position:50% 58%!important}
+
+  .contact-landing-head-v135{
+    min-height:360px!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center!important;
+    padding:46px 0 76px!important;
+  }
+  .contact-landing-grid-v135{
+    width:100%!important;
+    align-items:center!important;
+  }
+}
+
+@media (min-width:961px) and (max-height:760px){
+  body .subhero:not(.info-hero-v138){height:500px!important}
+}
+
+@media (max-width:960px){
+  body .subhero:not(.info-hero-v138){
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+  body .subhero:not(.info-hero-v138) .subheroCopy{min-height:0!important}
+  body .subhero:not(.info-hero-v138) .subheroMedia:not(.festival-hero-v165),
+  body .subhero:not(.info-hero-v138) .subheroMedia:not(.festival-hero-v165) img{
+    height:clamp(280px,58vw,390px)!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+  }
+  body.about-page-v183 .about-hero-media-v183 img{object-position:50% 66%!important}
+  body.faq-page-v185 .subheroMedia img{object-position:50% 52%!important}
+  body.delivery-explained-page-v186 .subheroMedia img{object-position:50% 58%!important}
+}
