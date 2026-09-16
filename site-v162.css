@@ -1723,6 +1723,82 @@ h1,h2,h3,h4{overflow-wrap:normal!important;word-break:normal!important;hyphens:n
   .subheroCopy{padding:54px 0!important}
 }
 
+/* =========================================================
+   V182 — BRANDED LANDING HEADINGS + BRANDS HERO BALANCE
+   Carry the navy/green About-page heading treatment through
+   every main landing. On navy/photo backgrounds the base text
+   remains white for contrast and the Lunar green is the accent.
+   The Brands & Venues portrait no longer dictates a very tall
+   hero and leave the copy stranded at the bottom of the screen.
+   ========================================================= */
+.brand-accent-v182{
+  color:#B0BC70!important;
+  font-style:normal!important;
+}
+
+@media (min-width:961px) and (max-width:1180px){
+  body.brands-page-v182 .subhero{
+    height:clamp(500px,calc(100svh - 132px),620px)!important;
+    min-height:500px!important;
+    max-height:620px!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  }
+  body.brands-page-v182 .subheroCopy,
+  body.brands-page-v182 .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+  body.brands-page-v182 .subheroCopy{
+    align-items:center!important;
+    padding:38px 0!important;
+  }
+  body.brands-page-v182 .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:50% 26%!important;
+  }
+  body.brands-page-v182 .subhero h1{
+    max-width:14ch!important;
+    font-size:clamp(42px,5.2vw,56px)!important;
+  }
+}
+
+@media (min-width:1181px){
+  body.brands-page-v182 .subhero{
+    height:clamp(520px,calc(100svh - 160px),680px)!important;
+    min-height:520px!important;
+    max-height:680px!important;
+  }
+  body.brands-page-v182 .subheroCopy,
+  body.brands-page-v182 .subheroMedia{
+    height:100%!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+  }
+  body.brands-page-v182 .subheroCopy{
+    align-items:center!important;
+    padding:42px 0!important;
+  }
+  body.brands-page-v182 .subheroMedia img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:cover!important;
+    object-position:50% 26%!important;
+  }
+  body.brands-page-v182 .subhero h1{
+    max-width:14ch!important;
+    font-size:clamp(46px,4.4vw,62px)!important;
+  }
+}
+
 /* V65 — stronger contact visibility */
 .topphone{font-size:18px!important;font-weight:900!important;padding:11px 14px!important}
 .topphone span{font-size:18px!important;font-weight:900!important}
