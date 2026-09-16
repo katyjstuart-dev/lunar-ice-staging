@@ -5171,12 +5171,62 @@ body.wedding-page-v174 .subheroMedia img{
     padding-bottom:38px!important;
   }
 
-  body.wedding-page-v174 .subheroMedia img,
-  body.festival-page-v165 .subheroMedia img{
+body.wedding-page-v174 .subheroMedia img,
+body.festival-page-v165 .subheroMedia img{
     width:100%!important;
     height:100%!important;
     min-height:0!important;
     max-height:none!important;
+  }
+}
+
+/* =========================================================
+   V183 — ABOUT PAGE UNIFORM NAVY LANDING
+   Use the same full-width split hero as the other main pages,
+   then turn the following statement light so the colour rhythm
+   remains deliberate rather than producing two navy bands.
+   ========================================================= */
+body.about-page-v183 .about-hero-v183{
+  background:#0D174D!important;
+  color:#fff!important;
+}
+body.about-page-v183 .about-hero-copy-v183 .eyebrow{
+  color:#B0BC70!important;
+}
+body.about-page-v183 .about-hero-copy-v183 h1{
+  color:#fff!important;
+  max-width:15ch!important;
+}
+body.about-page-v183 .about-hero-copy-v183 p,
+body.about-page-v183 .about-hero-copy-v183 .about54-lead{
+  color:#e7eaf2!important;
+}
+body.about-page-v183 .about-hero-copy-v183 .about-location-v183{
+  font-size:16px!important;
+  line-height:1.55!important;
+  margin-top:18px!important;
+}
+body.about-page-v183 .about-hero-media-v183 img{
+  object-position:50% 42%!important;
+}
+body.about-page-v183 .about54-statement-light-v183{
+  background:#f5f4ef!important;
+  color:#0D174D!important;
+}
+body.about-page-v183 .about54-statement-light-v183 p{
+  color:#7e8b43!important;
+}
+body.about-page-v183 .about54-statement-light-v183 p em{
+  color:#0D174D!important;
+}
+body.about-page-v183 .about54-statement-light-v183 h2{
+  color:#0D174D!important;
+}
+@media(max-width:760px){
+  body.about-page-v183 .about-location-v183{display:none!important}
+  body.about-page-v183 .about-hero-copy-v183 h1{
+    font-size:clamp(37px,11vw,48px)!important;
+    margin:10px 0 16px!important;
   }
 }
 
